@@ -38,5 +38,5 @@ In `lambda/`: `npm i`, `config.baseUrl` auf eine Test-Instanz setzen und Request
 
 ## Kürzer sprechen
 
-- **Eigener Aufrufname:** Developer Console → Build → Invocations → Skill Invocation Name (z. B. „einkauf“), speichern, Modell neu erstellen. Sehr allgemeine Wörter vermeiden; lehnt die Console ein Einzelwort ab, zwei Wörter nehmen.
-- **Alexa-Routinen** (feste Sätze, Aktion „Benutzerdefiniert“): „Alexa, Einkaufsliste“ → `öffne einkaufsplan` (Dialog: „Was soll drauf?“), „Alexa, was steht auf der Einkaufsliste“ → `frag einkaufsplan was auf der liste steht`. Frei gesprochene Artikel kann eine Routine nicht weitergeben.
+- **Aufrufname:** Vorgabe ist „einkaufs plan“ (gesprochen „Einkaufsplan“; Amazon verlangt mindestens zwei Wörter, nur Kleinbuchstaben). Ändern: Developer Console → Build → Invocations → Skill Invocation Name (z. B. „unser einkauf“), speichern, Modell neu erstellen. Sehr allgemeine Wörter vermeiden.
+- **Alexa-Routinen** (feste Sätze, Aktion „Benutzerdefiniert“): „Alexa, Einkaufsliste“ → `öffne einkaufs plan` (Dialog: „Was soll drauf?“), „Alexa, was steht auf der Einkaufsliste“ → `frag einkaufs plan was auf der liste steht`. Frei gesprochene Artikel kann eine Routine nicht weitergeben.
