@@ -18,8 +18,9 @@ Die ausführliche Anleitung steht in der App unter **Haushalt → API-Schlüssel
 
 1. Auf <https://developer.amazon.com/alexa/console/ask> mit dem Amazon-Konto der Echos anmelden.
 2. „Skill erstellen“ → Name „Einkaufsplan“, Deutsch (DE), Modell „Benutzerdefiniert“, Hosting „Alexa-hosted (Node.js)“, Region EU → Vorlage **„Skill importieren“** mit der Adresse dieses Repositorys.
-3. Reiter „Test“ → auf „Entwicklung“ stellen.
-4. In der App: Haushalt → API-Schlüssel → **„Alexa koppeln“** → Liste wählen, Code erzeugen und den Kopplungssatz zum Echo sagen.
+3. **Sprachmodell einfügen** (der Import übernimmt nur den Code): Reiter „Build“ → „JSON Editor“ → Inhalt komplett durch `skill-package/interactionModels/custom/de-DE.json` ersetzen → „Save“ → „Build skill“. Kontrolle: Aufrufname „mein einkauf“, Intents u. a. `AddItemIntent`, `PairIntent`.
+4. Reiter „Test“ → auf „Entwicklung“ stellen.
+5. In der App: Haushalt → API-Schlüssel → **„Alexa koppeln“** → Liste wählen, Code erzeugen und den Kopplungssatz zum Echo sagen.
 
 Es müssen keine Dateien bearbeitet werden: Der Skill enthält keine Zugangsdaten. Beim Koppeln tauscht er den Einmal-Code gegen einen eigenen API-Schlüssel des Haushalts und legt ihn pro Alexa-Konto im Skill-Speicher (DynamoDB des Alexa-hosted Skills) ab. Die Liste wird in der App gewählt; wird der Schlüssel „Alexa“ dort gelöscht, ist der Skill getrennt.
 
