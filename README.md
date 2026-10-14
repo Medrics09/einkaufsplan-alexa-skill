@@ -4,12 +4,11 @@ Alexa-Skill für die [Einkaufsplan-App](https://ep.wievielbrauchich.de): Einträ
 
 | Sprachbefehl | Wirkung |
 |---|---|
-| „Alexa, sag mein Einkaufsplan, füge zwei Liter Milch und Eier hinzu“ | hinzufügen (mehrere mit „und“/Komma) |
-| „Alexa, sag mein Einkaufsplan, streiche Tomaten“ | per Name entfernen |
-| „Alexa, frag mein Einkaufsplan, was auf der Liste steht“ | offene Einträge vorlesen (max. 15) |
-| „Alexa, öffne mein Einkaufsplan“ → „Butter“ → „Noch etwas?“ → „nein“ | mehrere Einträge nacheinander |
-| „Alexa, sag mein Einkaufsplan, Kopplungscode 4 8 1 5 2 3“ | mit dem Haushalt verbinden |
-| „Alexa, sag mein Einkaufsplan, trenne die Verbindung“ | Kopplung auf diesem Alexa-Konto löschen |
+| „Alexa, sag mein Einkauf, füge zwei Liter Milch und Eier hinzu“ | hinzufügen (mehrere mit „und“/Komma) |
+| „Alexa, sag mein Einkauf, streiche Tomaten“ | per Name entfernen |
+| „Alexa, frag mein Einkauf, was auf der Liste steht“ | offene Einträge vorlesen (max. 15) |
+| „Alexa, öffne mein Einkauf“ → „Butter“ → „Noch etwas?“ → „nein“ | mehrere Einträge nacheinander |
+| „Alexa, sag mein Einkauf, Kopplungscode 4 8 1 5 2 3“ | mit dem Haushalt verbinden |
 
 Jede erfolgreiche Änderung beginnt mit einem Ton und nennt „Einkaufsplan“ – so ist hörbar, dass nicht Alexas eigene Liste bedient wurde. Zuordnung zu vorhandenen Zutaten (Singular/Plural, Tippfehler) und Zusammenführen macht das Backend.
 
@@ -38,5 +37,5 @@ In `lambda/`: `npm i`, `config.baseUrl` auf eine Test-Instanz setzen und Request
 
 ## Kürzer sprechen
 
-- **Aufrufname:** Vorgabe ist „mein einkaufsplan“ (Amazon verlangt mindestens zwei Wörter, nur Kleinbuchstaben; „mein einkaufsplan“ scheitert, weil Alexa „Einkaufsplan“ immer als ein Wort erkennt). Ändern: Developer Console → Build → Invocations → Skill Invocation Name (z. B. „unser einkauf“), speichern, Modell neu erstellen. Sehr allgemeine Wörter vermeiden.
-- **Alexa-Routinen** (feste Sätze, Aktion „Benutzerdefiniert“): „Alexa, Einkaufsliste“ → `öffne mein einkaufsplan` (Dialog: „Was soll drauf?“), „Alexa, was steht auf der Einkaufsliste“ → `frag mein einkaufsplan was auf der liste steht`. Frei gesprochene Artikel kann eine Routine nicht weitergeben.
+- **Aufrufname:** Vorgabe ist „mein einkauf“ (Amazon verlangt mindestens zwei Wörter, nur Kleinbuchstaben; „mein einkauf“ scheitert, weil Alexa „Einkaufsplan“ immer als ein Wort erkennt). Ändern: Developer Console → Build → Invocations → Skill Invocation Name (z. B. „unser einkauf“), speichern, Modell neu erstellen. Sehr allgemeine Wörter vermeiden.
+- **Alexa-Routinen** (feste Sätze, Aktion „Benutzerdefiniert“): „Alexa, Einkaufsliste“ → `öffne mein einkauf` (Dialog: „Was soll drauf?“), „Alexa, was steht auf der Einkaufsliste“ → `frag mein einkauf was auf der liste steht`. Frei gesprochene Artikel kann eine Routine nicht weitergeben.

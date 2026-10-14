@@ -7,9 +7,9 @@
           "summary": "Einkaufsliste der Einkaufsplan-App per Sprache füllen.",
           "description": "Fügt Einträge zur Einkaufsliste der Einkaufsplan-App hinzu, streicht sie oder liest die Liste vor. Privater Skill.",
           "examplePhrases": [
-            "Alexa, sag mein Einkaufsplan, füge Milch hinzu",
-            "Alexa, frag mein Einkaufsplan, was auf der Liste steht",
-            "Alexa, sag mein Einkaufsplan, streiche Tomaten"
+            "Alexa, sag mein Einkauf, füge Milch hinzu",
+            "Alexa, frag mein Einkauf, was auf der Liste steht",
+            "Alexa, sag mein Einkauf, streiche Tomaten"
           ],
           "keywords": ["einkaufsliste", "einkauf"]
         }

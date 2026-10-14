@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "mein einkaufsplan",
+      "invocationName": "mein einkauf",
       "intents": [
         {
           "name": "PairIntent",
@@ -23,17 +23,6 @@
             "code {code}",
             "der code ist {code}",
             "mein code ist {code}"
-          ]
-        },
-        {
-          "name": "UnpairIntent",
-          "slots": [],
-          "samples": [
-            "trenne die verbindung",
-            "verbindung trennen",
-            "entkoppeln",
-            "kopplung aufheben",
-            "kopplung löschen"
           ]
         },
         {
@@ -62,6 +51,20 @@
             "noch {item}",
             "und {item}",
             "auch {item}"
+          ]
+        },
+        {
+          "name": "ItemOnlyIntent",
+          "slots": [
+            {
+              "name": "item",
+              "type": "GROCERY"
+            }
+          ],
+          "samples": [
+            "{item}",
+            "{item} bitte",
+            "bitte {item}"
           ]
         },
         {
@@ -133,7 +136,4828 @@
           "samples": []
         }
       ],
-      "types": []
+      "types": [
+        {
+          "name": "GROCERY",
+          "values": [
+            {
+              "name": {
+                "value": "1337 mate"
+              }
+            },
+            {
+              "name": {
+                "value": "28 black"
+              }
+            },
+            {
+              "name": {
+                "value": "8x4"
+              }
+            },
+            {
+              "name": {
+                "value": "actimel"
+              }
+            },
+            {
+              "name": {
+                "value": "adelholzener"
+              }
+            },
+            {
+              "name": {
+                "value": "afri"
+              }
+            },
+            {
+              "name": {
+                "value": "afri cola"
+              }
+            },
+            {
+              "name": {
+                "value": "agavendicksaft"
+              }
+            },
+            {
+              "name": {
+                "value": "aglio e olio"
+              }
+            },
+            {
+              "name": {
+                "value": "ahornsirup"
+              }
+            },
+            {
+              "name": {
+                "value": "albi"
+              }
+            },
+            {
+              "name": {
+                "value": "alete"
+              }
+            },
+            {
+              "name": {
+                "value": "allzweckreiniger"
+              }
+            },
+            {
+              "name": {
+                "value": "almighurt"
+              }
+            },
+            {
+              "name": {
+                "value": "altbier"
+              }
+            },
+            {
+              "name": {
+                "value": "alufolie"
+              }
+            },
+            {
+              "name": {
+                "value": "always"
+              }
+            },
+            {
+              "name": {
+                "value": "ananas"
+              }
+            },
+            {
+              "name": {
+                "value": "andechser"
+              }
+            },
+            {
+              "name": {
+                "value": "apfel"
+              }
+            },
+            {
+              "name": {
+                "value": "apfelessig"
+              }
+            },
+            {
+              "name": {
+                "value": "apfelmus"
+              }
+            },
+            {
+              "name": {
+                "value": "apfelsaft"
+              }
+            },
+            {
+              "name": {
+                "value": "apollinaris"
+              }
+            },
+            {
+              "name": {
+                "value": "appenzeller"
+              }
+            },
+            {
+              "name": {
+                "value": "aprikose"
+              }
+            },
+            {
+              "name": {
+                "value": "aptamil"
+              }
+            },
+            {
+              "name": {
+                "value": "ariel"
+              }
+            },
+            {
+              "name": {
+                "value": "arizona"
+              }
+            },
+            {
+              "name": {
+                "value": "asiago"
+              }
+            },
+            {
+              "name": {
+                "value": "aspirin"
+              }
+            },
+            {
+              "name": {
+                "value": "astra"
+              }
+            },
+            {
+              "name": {
+                "value": "aubergine"
+              }
+            },
+            {
+              "name": {
+                "value": "aufstrich"
+              }
+            },
+            {
+              "name": {
+                "value": "augustiner"
+              }
+            },
+            {
+              "name": {
+                "value": "avocado"
+              }
+            },
+            {
+              "name": {
+                "value": "axe"
+              }
+            },
+            {
+              "name": {
+                "value": "babybel"
+              }
+            },
+            {
+              "name": {
+                "value": "backpapier"
+              }
+            },
+            {
+              "name": {
+                "value": "backpulver"
+              }
+            },
+            {
+              "name": {
+                "value": "bacon"
+              }
+            },
+            {
+              "name": {
+                "value": "badreiniger"
+              }
+            },
+            {
+              "name": {
+                "value": "baguette"
+              }
+            },
+            {
+              "name": {
+                "value": "bahlsen"
+              }
+            },
+            {
+              "name": {
+                "value": "balea"
+              }
+            },
+            {
+              "name": {
+                "value": "balsamico"
+              }
+            },
+            {
+              "name": {
+                "value": "banane"
+              }
+            },
+            {
+              "name": {
+                "value": "barilla"
+              }
+            },
+            {
+              "name": {
+                "value": "barolo"
+              }
+            },
+            {
+              "name": {
+                "value": "basilikum"
+              }
+            },
+            {
+              "name": {
+                "value": "basmati"
+              }
+            },
+            {
+              "name": {
+                "value": "batterien"
+              }
+            },
+            {
+              "name": {
+                "value": "bauer joghurt"
+              }
+            },
+            {
+              "name": {
+                "value": "beaufort"
+              }
+            },
+            {
+              "name": {
+                "value": "bebe"
+              }
+            },
+            {
+              "name": {
+                "value": "beck's"
+              }
+            },
+            {
+              "name": {
+                "value": "becks"
+              }
+            },
+            {
+              "name": {
+                "value": "ben & jerry's"
+              }
+            },
+            {
+              "name": {
+                "value": "ben & jerrys"
+              }
+            },
+            {
+              "name": {
+                "value": "ben and jerrys"
+              }
+            },
+            {
+              "name": {
+                "value": "ben's original"
+              }
+            },
+            {
+              "name": {
+                "value": "bens original"
+              }
+            },
+            {
+              "name": {
+                "value": "bergkäse"
+              }
+            },
+            {
+              "name": {
+                "value": "berglinsen"
+              }
+            },
+            {
+              "name": {
+                "value": "berliner"
+              }
+            },
+            {
+              "name": {
+                "value": "beyond"
+              }
+            },
+            {
+              "name": {
+                "value": "beyond burger"
+              }
+            },
+            {
+              "name": {
+                "value": "beyond meat"
+              }
+            },
+            {
+              "name": {
+                "value": "bier"
+              }
+            },
+            {
+              "name": {
+                "value": "bierwurst"
+              }
+            },
+            {
+              "name": {
+                "value": "billie green"
+              }
+            },
+            {
+              "name": {
+                "value": "binden"
+              }
+            },
+            {
+              "name": {
+                "value": "bionade"
+              }
+            },
+            {
+              "name": {
+                "value": "birne"
+              }
+            },
+            {
+              "name": {
+                "value": "bitburger"
+              }
+            },
+            {
+              "name": {
+                "value": "blaubeere"
+              }
+            },
+            {
+              "name": {
+                "value": "blaubeeren"
+              }
+            },
+            {
+              "name": {
+                "value": "blaukraut"
+              }
+            },
+            {
+              "name": {
+                "value": "blumen"
+              }
+            },
+            {
+              "name": {
+                "value": "blumenkohl"
+              }
+            },
+            {
+              "name": {
+                "value": "bluna"
+              }
+            },
+            {
+              "name": {
+                "value": "bockwurst"
+              }
+            },
+            {
+              "name": {
+                "value": "bodylotion"
+              }
+            },
+            {
+              "name": {
+                "value": "bohne"
+              }
+            },
+            {
+              "name": {
+                "value": "bohnen"
+              }
+            },
+            {
+              "name": {
+                "value": "bohnen getrocknet"
+              }
+            },
+            {
+              "name": {
+                "value": "bonbel"
+              }
+            },
+            {
+              "name": {
+                "value": "bonbons"
+              }
+            },
+            {
+              "name": {
+                "value": "bonzo"
+              }
+            },
+            {
+              "name": {
+                "value": "bouillon"
+              }
+            },
+            {
+              "name": {
+                "value": "bounty"
+              }
+            },
+            {
+              "name": {
+                "value": "boursin"
+              }
+            },
+            {
+              "name": {
+                "value": "bratwurst"
+              }
+            },
+            {
+              "name": {
+                "value": "brauner zucker"
+              }
+            },
+            {
+              "name": {
+                "value": "bresso"
+              }
+            },
+            {
+              "name": {
+                "value": "brezel"
+              }
+            },
+            {
+              "name": {
+                "value": "brie"
+              }
+            },
+            {
+              "name": {
+                "value": "brokkoli"
+              }
+            },
+            {
+              "name": {
+                "value": "brombeere"
+              }
+            },
+            {
+              "name": {
+                "value": "brombeeren"
+              }
+            },
+            {
+              "name": {
+                "value": "brot"
+              }
+            },
+            {
+              "name": {
+                "value": "brötchen"
+              }
+            },
+            {
+              "name": {
+                "value": "brühe"
+              }
+            },
+            {
+              "name": {
+                "value": "buchweizen"
+              }
+            },
+            {
+              "name": {
+                "value": "buitoni"
+              }
+            },
+            {
+              "name": {
+                "value": "buko"
+              }
+            },
+            {
+              "name": {
+                "value": "bulgur"
+              }
+            },
+            {
+              "name": {
+                "value": "burrata"
+              }
+            },
+            {
+              "name": {
+                "value": "butter"
+              }
+            },
+            {
+              "name": {
+                "value": "butterkäse"
+              }
+            },
+            {
+              "name": {
+                "value": "buttermilch"
+              }
+            },
+            {
+              "name": {
+                "value": "butternut"
+              }
+            },
+            {
+              "name": {
+                "value": "büffelmozzarella"
+              }
+            },
+            {
+              "name": {
+                "value": "cabernet"
+              }
+            },
+            {
+              "name": {
+                "value": "calamari"
+              }
+            },
+            {
+              "name": {
+                "value": "calgon"
+              }
+            },
+            {
+              "name": {
+                "value": "calippo"
+              }
+            },
+            {
+              "name": {
+                "value": "cambozola"
+              }
+            },
+            {
+              "name": {
+                "value": "camembert"
+              }
+            },
+            {
+              "name": {
+                "value": "carefree"
+              }
+            },
+            {
+              "name": {
+                "value": "carlsberg"
+              }
+            },
+            {
+              "name": {
+                "value": "cashew"
+              }
+            },
+            {
+              "name": {
+                "value": "cava"
+              }
+            },
+            {
+              "name": {
+                "value": "champagner"
+              }
+            },
+            {
+              "name": {
+                "value": "champignon"
+              }
+            },
+            {
+              "name": {
+                "value": "champignons"
+              }
+            },
+            {
+              "name": {
+                "value": "chardonnay"
+              }
+            },
+            {
+              "name": {
+                "value": "cheddar"
+              }
+            },
+            {
+              "name": {
+                "value": "chianti"
+              }
+            },
+            {
+              "name": {
+                "value": "chiasamen"
+              }
+            },
+            {
+              "name": {
+                "value": "chili"
+              }
+            },
+            {
+              "name": {
+                "value": "chilipulver"
+              }
+            },
+            {
+              "name": {
+                "value": "chinakohl"
+              }
+            },
+            {
+              "name": {
+                "value": "chips"
+              }
+            },
+            {
+              "name": {
+                "value": "chorizo"
+              }
+            },
+            {
+              "name": {
+                "value": "ciabatta"
+              }
+            },
+            {
+              "name": {
+                "value": "cif"
+              }
+            },
+            {
+              "name": {
+                "value": "cini minis"
+              }
+            },
+            {
+              "name": {
+                "value": "clementine"
+              }
+            },
+            {
+              "name": {
+                "value": "club mate"
+              }
+            },
+            {
+              "name": {
+                "value": "co2 flasche"
+              }
+            },
+            {
+              "name": {
+                "value": "co2 zylinder"
+              }
+            },
+            {
+              "name": {
+                "value": "coca cola"
+              }
+            },
+            {
+              "name": {
+                "value": "coca-cola"
+              }
+            },
+            {
+              "name": {
+                "value": "cocacola"
+              }
+            },
+            {
+              "name": {
+                "value": "cocktailtomate"
+              }
+            },
+            {
+              "name": {
+                "value": "cola"
+              }
+            },
+            {
+              "name": {
+                "value": "colgate"
+              }
+            },
+            {
+              "name": {
+                "value": "compeed"
+              }
+            },
+            {
+              "name": {
+                "value": "comté"
+              }
+            },
+            {
+              "name": {
+                "value": "conditioner"
+              }
+            },
+            {
+              "name": {
+                "value": "coral"
+              }
+            },
+            {
+              "name": {
+                "value": "cordon bleu"
+              }
+            },
+            {
+              "name": {
+                "value": "cornetto"
+              }
+            },
+            {
+              "name": {
+                "value": "cornflakes"
+              }
+            },
+            {
+              "name": {
+                "value": "corona"
+              }
+            },
+            {
+              "name": {
+                "value": "cous cous"
+              }
+            },
+            {
+              "name": {
+                "value": "couscous"
+              }
+            },
+            {
+              "name": {
+                "value": "cranberries"
+              }
+            },
+            {
+              "name": {
+                "value": "creme fraiche"
+              }
+            },
+            {
+              "name": {
+                "value": "croissant"
+              }
+            },
+            {
+              "name": {
+                "value": "crunchy müsli"
+              }
+            },
+            {
+              "name": {
+                "value": "crème fraîche"
+              }
+            },
+            {
+              "name": {
+                "value": "crémant"
+              }
+            },
+            {
+              "name": {
+                "value": "curry"
+              }
+            },
+            {
+              "name": {
+                "value": "currypulver"
+              }
+            },
+            {
+              "name": {
+                "value": "danone"
+              }
+            },
+            {
+              "name": {
+                "value": "dattel"
+              }
+            },
+            {
+              "name": {
+                "value": "de cecco"
+              }
+            },
+            {
+              "name": {
+                "value": "deinhard"
+              }
+            },
+            {
+              "name": {
+                "value": "deit"
+              }
+            },
+            {
+              "name": {
+                "value": "deo"
+              }
+            },
+            {
+              "name": {
+                "value": "deodorant"
+              }
+            },
+            {
+              "name": {
+                "value": "der general"
+              }
+            },
+            {
+              "name": {
+                "value": "develey"
+              }
+            },
+            {
+              "name": {
+                "value": "diamant zucker"
+              }
+            },
+            {
+              "name": {
+                "value": "diebels"
+              }
+            },
+            {
+              "name": {
+                "value": "dill"
+              }
+            },
+            {
+              "name": {
+                "value": "dinkelmehl"
+              }
+            },
+            {
+              "name": {
+                "value": "dom pérignon"
+              }
+            },
+            {
+              "name": {
+                "value": "domestos"
+              }
+            },
+            {
+              "name": {
+                "value": "donut"
+              }
+            },
+            {
+              "name": {
+                "value": "dornfelder"
+              }
+            },
+            {
+              "name": {
+                "value": "dosentomaten"
+              }
+            },
+            {
+              "name": {
+                "value": "dove"
+              }
+            },
+            {
+              "name": {
+                "value": "dr oetker"
+              }
+            },
+            {
+              "name": {
+                "value": "dr. best"
+              }
+            },
+            {
+              "name": {
+                "value": "dr. oetker"
+              }
+            },
+            {
+              "name": {
+                "value": "drachenfrucht"
+              }
+            },
+            {
+              "name": {
+                "value": "duckstein"
+              }
+            },
+            {
+              "name": {
+                "value": "dunkles"
+              }
+            },
+            {
+              "name": {
+                "value": "duplo"
+              }
+            },
+            {
+              "name": {
+                "value": "duschgel"
+              }
+            },
+            {
+              "name": {
+                "value": "eckes"
+              }
+            },
+            {
+              "name": {
+                "value": "edamer"
+              }
+            },
+            {
+              "name": {
+                "value": "effect"
+              }
+            },
+            {
+              "name": {
+                "value": "ehrmann"
+              }
+            },
+            {
+              "name": {
+                "value": "ei"
+              }
+            },
+            {
+              "name": {
+                "value": "eier"
+              }
+            },
+            {
+              "name": {
+                "value": "eis"
+              }
+            },
+            {
+              "name": {
+                "value": "eisbergsalat"
+              }
+            },
+            {
+              "name": {
+                "value": "eistee"
+              }
+            },
+            {
+              "name": {
+                "value": "elmex"
+              }
+            },
+            {
+              "name": {
+                "value": "emmentaler"
+              }
+            },
+            {
+              "name": {
+                "value": "energy drink"
+              }
+            },
+            {
+              "name": {
+                "value": "ensinger"
+              }
+            },
+            {
+              "name": {
+                "value": "ente"
+              }
+            },
+            {
+              "name": {
+                "value": "erasco"
+              }
+            },
+            {
+              "name": {
+                "value": "erbse"
+              }
+            },
+            {
+              "name": {
+                "value": "erbsen"
+              }
+            },
+            {
+              "name": {
+                "value": "erdbeere"
+              }
+            },
+            {
+              "name": {
+                "value": "erdbeeren"
+              }
+            },
+            {
+              "name": {
+                "value": "erdinger"
+              }
+            },
+            {
+              "name": {
+                "value": "erdnussbutter"
+              }
+            },
+            {
+              "name": {
+                "value": "erdnüsse"
+              }
+            },
+            {
+              "name": {
+                "value": "espresso"
+              }
+            },
+            {
+              "name": {
+                "value": "esrom"
+              }
+            },
+            {
+              "name": {
+                "value": "essig"
+              }
+            },
+            {
+              "name": {
+                "value": "essiggurken"
+              }
+            },
+            {
+              "name": {
+                "value": "eucerin"
+              }
+            },
+            {
+              "name": {
+                "value": "evian"
+              }
+            },
+            {
+              "name": {
+                "value": "fa"
+              }
+            },
+            {
+              "name": {
+                "value": "fachingen"
+              }
+            },
+            {
+              "name": {
+                "value": "fairy"
+              }
+            },
+            {
+              "name": {
+                "value": "fanta"
+              }
+            },
+            {
+              "name": {
+                "value": "farfalle"
+              }
+            },
+            {
+              "name": {
+                "value": "fassbrause"
+              }
+            },
+            {
+              "name": {
+                "value": "feige"
+              }
+            },
+            {
+              "name": {
+                "value": "feldsalat"
+              }
+            },
+            {
+              "name": {
+                "value": "felix"
+              }
+            },
+            {
+              "name": {
+                "value": "fenchel"
+              }
+            },
+            {
+              "name": {
+                "value": "ferrero"
+              }
+            },
+            {
+              "name": {
+                "value": "ferrero rocher"
+              }
+            },
+            {
+              "name": {
+                "value": "fertigpizza"
+              }
+            },
+            {
+              "name": {
+                "value": "feta"
+              }
+            },
+            {
+              "name": {
+                "value": "feuchttücher"
+              }
+            },
+            {
+              "name": {
+                "value": "filterkaffee"
+              }
+            },
+            {
+              "name": {
+                "value": "finish"
+              }
+            },
+            {
+              "name": {
+                "value": "fischsauce"
+              }
+            },
+            {
+              "name": {
+                "value": "fischstäbchen"
+              }
+            },
+            {
+              "name": {
+                "value": "fladenbrot"
+              }
+            },
+            {
+              "name": {
+                "value": "flammkuchen teig"
+              }
+            },
+            {
+              "name": {
+                "value": "flammkuchenteig"
+              }
+            },
+            {
+              "name": {
+                "value": "fleischwurst"
+              }
+            },
+            {
+              "name": {
+                "value": "flensburger"
+              }
+            },
+            {
+              "name": {
+                "value": "focaccia"
+              }
+            },
+            {
+              "name": {
+                "value": "fond"
+              }
+            },
+            {
+              "name": {
+                "value": "fondue käse"
+              }
+            },
+            {
+              "name": {
+                "value": "forelle"
+              }
+            },
+            {
+              "name": {
+                "value": "frankenheim"
+              }
+            },
+            {
+              "name": {
+                "value": "frankfurter"
+              }
+            },
+            {
+              "name": {
+                "value": "franziskaner"
+              }
+            },
+            {
+              "name": {
+                "value": "freixenet"
+              }
+            },
+            {
+              "name": {
+                "value": "frischhaltefolie"
+              }
+            },
+            {
+              "name": {
+                "value": "frischkaese"
+              }
+            },
+            {
+              "name": {
+                "value": "frischkäse"
+              }
+            },
+            {
+              "name": {
+                "value": "frischkäse-aufstrich"
+              }
+            },
+            {
+              "name": {
+                "value": "frischli"
+              }
+            },
+            {
+              "name": {
+                "value": "fritz cola"
+              }
+            },
+            {
+              "name": {
+                "value": "fritz kola"
+              }
+            },
+            {
+              "name": {
+                "value": "fritz mate"
+              }
+            },
+            {
+              "name": {
+                "value": "frizzante"
+              }
+            },
+            {
+              "name": {
+                "value": "frolic"
+              }
+            },
+            {
+              "name": {
+                "value": "froot loops"
+              }
+            },
+            {
+              "name": {
+                "value": "frosch"
+              }
+            },
+            {
+              "name": {
+                "value": "frosta"
+              }
+            },
+            {
+              "name": {
+                "value": "fruchtzwerge"
+              }
+            },
+            {
+              "name": {
+                "value": "früchtetee"
+              }
+            },
+            {
+              "name": {
+                "value": "frühlingszwiebel"
+              }
+            },
+            {
+              "name": {
+                "value": "fusilli"
+              }
+            },
+            {
+              "name": {
+                "value": "fürstenberg"
+              }
+            },
+            {
+              "name": {
+                "value": "gans"
+              }
+            },
+            {
+              "name": {
+                "value": "garam masala"
+              }
+            },
+            {
+              "name": {
+                "value": "garden gourmet"
+              }
+            },
+            {
+              "name": {
+                "value": "garnelen"
+              }
+            },
+            {
+              "name": {
+                "value": "garnier"
+              }
+            },
+            {
+              "name": {
+                "value": "gefrierbeutel"
+              }
+            },
+            {
+              "name": {
+                "value": "gehackte tomaten"
+              }
+            },
+            {
+              "name": {
+                "value": "gelee"
+              }
+            },
+            {
+              "name": {
+                "value": "gemahlener kaffee"
+              }
+            },
+            {
+              "name": {
+                "value": "gemischtes hack"
+              }
+            },
+            {
+              "name": {
+                "value": "gemuesebruehe"
+              }
+            },
+            {
+              "name": {
+                "value": "gemüsebrühe"
+              }
+            },
+            {
+              "name": {
+                "value": "geramont"
+              }
+            },
+            {
+              "name": {
+                "value": "geriebener käse"
+              }
+            },
+            {
+              "name": {
+                "value": "gerolsteiner"
+              }
+            },
+            {
+              "name": {
+                "value": "geschirrspültabs"
+              }
+            },
+            {
+              "name": {
+                "value": "gewürzgurken"
+              }
+            },
+            {
+              "name": {
+                "value": "glasnudeln"
+              }
+            },
+            {
+              "name": {
+                "value": "glasreiniger"
+              }
+            },
+            {
+              "name": {
+                "value": "glühbirne"
+              }
+            },
+            {
+              "name": {
+                "value": "gnocchi"
+              }
+            },
+            {
+              "name": {
+                "value": "golden toast"
+              }
+            },
+            {
+              "name": {
+                "value": "gorgonzola"
+              }
+            },
+            {
+              "name": {
+                "value": "gouda"
+              }
+            },
+            {
+              "name": {
+                "value": "gourmet"
+              }
+            },
+            {
+              "name": {
+                "value": "grana padano"
+              }
+            },
+            {
+              "name": {
+                "value": "granatapfel"
+              }
+            },
+            {
+              "name": {
+                "value": "granini"
+              }
+            },
+            {
+              "name": {
+                "value": "grapefruit"
+              }
+            },
+            {
+              "name": {
+                "value": "grauburgunder"
+              }
+            },
+            {
+              "name": {
+                "value": "griechischer joghurt"
+              }
+            },
+            {
+              "name": {
+                "value": "grünkohl"
+              }
+            },
+            {
+              "name": {
+                "value": "grüntee"
+              }
+            },
+            {
+              "name": {
+                "value": "guinness"
+              }
+            },
+            {
+              "name": {
+                "value": "gulaschsuppe"
+              }
+            },
+            {
+              "name": {
+                "value": "gummibärchen"
+              }
+            },
+            {
+              "name": {
+                "value": "gurke"
+              }
+            },
+            {
+              "name": {
+                "value": "géramont"
+              }
+            },
+            {
+              "name": {
+                "value": "h-milch"
+              }
+            },
+            {
+              "name": {
+                "value": "haagen-dazs"
+              }
+            },
+            {
+              "name": {
+                "value": "hackfleisch"
+              }
+            },
+            {
+              "name": {
+                "value": "haferflocken"
+              }
+            },
+            {
+              "name": {
+                "value": "hafermilch"
+              }
+            },
+            {
+              "name": {
+                "value": "halloumi"
+              }
+            },
+            {
+              "name": {
+                "value": "handcreme"
+              }
+            },
+            {
+              "name": {
+                "value": "handseife"
+              }
+            },
+            {
+              "name": {
+                "value": "hansaplast"
+              }
+            },
+            {
+              "name": {
+                "value": "hanuta"
+              }
+            },
+            {
+              "name": {
+                "value": "haribo"
+              }
+            },
+            {
+              "name": {
+                "value": "harissa"
+              }
+            },
+            {
+              "name": {
+                "value": "harry"
+              }
+            },
+            {
+              "name": {
+                "value": "harzer"
+              }
+            },
+            {
+              "name": {
+                "value": "haselnussmus"
+              }
+            },
+            {
+              "name": {
+                "value": "haselnüsse"
+              }
+            },
+            {
+              "name": {
+                "value": "head & shoulders"
+              }
+            },
+            {
+              "name": {
+                "value": "hefe"
+              }
+            },
+            {
+              "name": {
+                "value": "hefezopf"
+              }
+            },
+            {
+              "name": {
+                "value": "heidelbeere"
+              }
+            },
+            {
+              "name": {
+                "value": "heidelbeeren"
+              }
+            },
+            {
+              "name": {
+                "value": "heineken"
+              }
+            },
+            {
+              "name": {
+                "value": "heinz"
+              }
+            },
+            {
+              "name": {
+                "value": "hela"
+              }
+            },
+            {
+              "name": {
+                "value": "hella"
+              }
+            },
+            {
+              "name": {
+                "value": "helles"
+              }
+            },
+            {
+              "name": {
+                "value": "henkell"
+              }
+            },
+            {
+              "name": {
+                "value": "hering"
+              }
+            },
+            {
+              "name": {
+                "value": "herta"
+              }
+            },
+            {
+              "name": {
+                "value": "himbeere"
+              }
+            },
+            {
+              "name": {
+                "value": "himbeeren"
+              }
+            },
+            {
+              "name": {
+                "value": "hipp"
+              }
+            },
+            {
+              "name": {
+                "value": "hirse"
+              }
+            },
+            {
+              "name": {
+                "value": "hirtenkaese"
+              }
+            },
+            {
+              "name": {
+                "value": "hirtenkäse"
+              }
+            },
+            {
+              "name": {
+                "value": "hochland"
+              }
+            },
+            {
+              "name": {
+                "value": "hofbräu"
+              }
+            },
+            {
+              "name": {
+                "value": "hohes c"
+              }
+            },
+            {
+              "name": {
+                "value": "hokkaido"
+              }
+            },
+            {
+              "name": {
+                "value": "homann"
+              }
+            },
+            {
+              "name": {
+                "value": "honig"
+              }
+            },
+            {
+              "name": {
+                "value": "honigmelone"
+              }
+            },
+            {
+              "name": {
+                "value": "huehnerbruehe"
+              }
+            },
+            {
+              "name": {
+                "value": "hummus"
+              }
+            },
+            {
+              "name": {
+                "value": "hundefutter"
+              }
+            },
+            {
+              "name": {
+                "value": "hundesnack"
+              }
+            },
+            {
+              "name": {
+                "value": "häagen-dazs"
+              }
+            },
+            {
+              "name": {
+                "value": "hähnchen"
+              }
+            },
+            {
+              "name": {
+                "value": "hähnchenbrust"
+              }
+            },
+            {
+              "name": {
+                "value": "hähnchenschenkel"
+              }
+            },
+            {
+              "name": {
+                "value": "hühnchen"
+              }
+            },
+            {
+              "name": {
+                "value": "hühnerbrühe"
+              }
+            },
+            {
+              "name": {
+                "value": "hüttenkäse"
+              }
+            },
+            {
+              "name": {
+                "value": "ibuprofen"
+              }
+            },
+            {
+              "name": {
+                "value": "iglo"
+              }
+            },
+            {
+              "name": {
+                "value": "ingwer"
+              }
+            },
+            {
+              "name": {
+                "value": "innocent"
+              }
+            },
+            {
+              "name": {
+                "value": "instantkaffee"
+              }
+            },
+            {
+              "name": {
+                "value": "italienische kräuter"
+              }
+            },
+            {
+              "name": {
+                "value": "jalapeño"
+              }
+            },
+            {
+              "name": {
+                "value": "jasminreis"
+              }
+            },
+            {
+              "name": {
+                "value": "jever"
+              }
+            },
+            {
+              "name": {
+                "value": "joghurt"
+              }
+            },
+            {
+              "name": {
+                "value": "johannisbeere"
+              }
+            },
+            {
+              "name": {
+                "value": "kabeljau"
+              }
+            },
+            {
+              "name": {
+                "value": "kaffee"
+              }
+            },
+            {
+              "name": {
+                "value": "kaffeebohnen"
+              }
+            },
+            {
+              "name": {
+                "value": "kaffeekapseln"
+              }
+            },
+            {
+              "name": {
+                "value": "kaffeepads"
+              }
+            },
+            {
+              "name": {
+                "value": "kakao"
+              }
+            },
+            {
+              "name": {
+                "value": "kakao trinken"
+              }
+            },
+            {
+              "name": {
+                "value": "kakaopulver"
+              }
+            },
+            {
+              "name": {
+                "value": "kapern"
+              }
+            },
+            {
+              "name": {
+                "value": "karotte"
+              }
+            },
+            {
+              "name": {
+                "value": "karotten"
+              }
+            },
+            {
+              "name": {
+                "value": "kartoffel"
+              }
+            },
+            {
+              "name": {
+                "value": "kartoffeln"
+              }
+            },
+            {
+              "name": {
+                "value": "kasseler"
+              }
+            },
+            {
+              "name": {
+                "value": "katjes"
+              }
+            },
+            {
+              "name": {
+                "value": "katzenfutter"
+              }
+            },
+            {
+              "name": {
+                "value": "katzensnack"
+              }
+            },
+            {
+              "name": {
+                "value": "katzenstreu"
+              }
+            },
+            {
+              "name": {
+                "value": "kefir"
+              }
+            },
+            {
+              "name": {
+                "value": "kekse"
+              }
+            },
+            {
+              "name": {
+                "value": "kellogg's"
+              }
+            },
+            {
+              "name": {
+                "value": "kelloggs"
+              }
+            },
+            {
+              "name": {
+                "value": "kernöl"
+              }
+            },
+            {
+              "name": {
+                "value": "kerzen"
+              }
+            },
+            {
+              "name": {
+                "value": "ketchup"
+              }
+            },
+            {
+              "name": {
+                "value": "kichererbsen"
+              }
+            },
+            {
+              "name": {
+                "value": "kichererbsen suppe"
+              }
+            },
+            {
+              "name": {
+                "value": "kidneybohnen"
+              }
+            },
+            {
+              "name": {
+                "value": "kinder bueno"
+              }
+            },
+            {
+              "name": {
+                "value": "kinder country"
+              }
+            },
+            {
+              "name": {
+                "value": "kinder pingui"
+              }
+            },
+            {
+              "name": {
+                "value": "kinder riegel"
+              }
+            },
+            {
+              "name": {
+                "value": "kinder schoki"
+              }
+            },
+            {
+              "name": {
+                "value": "kinderschokolade"
+              }
+            },
+            {
+              "name": {
+                "value": "kiri"
+              }
+            },
+            {
+              "name": {
+                "value": "kirsche"
+              }
+            },
+            {
+              "name": {
+                "value": "kirschen"
+              }
+            },
+            {
+              "name": {
+                "value": "kirschtomate"
+              }
+            },
+            {
+              "name": {
+                "value": "kit kat"
+              }
+            },
+            {
+              "name": {
+                "value": "kitekat"
+              }
+            },
+            {
+              "name": {
+                "value": "kitkat"
+              }
+            },
+            {
+              "name": {
+                "value": "kiwi"
+              }
+            },
+            {
+              "name": {
+                "value": "klarspüler"
+              }
+            },
+            {
+              "name": {
+                "value": "kleenex"
+              }
+            },
+            {
+              "name": {
+                "value": "klopapier"
+              }
+            },
+            {
+              "name": {
+                "value": "knoblauch"
+              }
+            },
+            {
+              "name": {
+                "value": "knorr"
+              }
+            },
+            {
+              "name": {
+                "value": "knäckebrot"
+              }
+            },
+            {
+              "name": {
+                "value": "kochschinken"
+              }
+            },
+            {
+              "name": {
+                "value": "koelln"
+              }
+            },
+            {
+              "name": {
+                "value": "koerniger frischkaese"
+              }
+            },
+            {
+              "name": {
+                "value": "kohlrabi"
+              }
+            },
+            {
+              "name": {
+                "value": "kokos joghurt"
+              }
+            },
+            {
+              "name": {
+                "value": "kokosdrink"
+              }
+            },
+            {
+              "name": {
+                "value": "kokosmilch"
+              }
+            },
+            {
+              "name": {
+                "value": "kokosöl"
+              }
+            },
+            {
+              "name": {
+                "value": "konfitüre"
+              }
+            },
+            {
+              "name": {
+                "value": "kopfsalat"
+              }
+            },
+            {
+              "name": {
+                "value": "koriander"
+              }
+            },
+            {
+              "name": {
+                "value": "koriander gemahlen"
+              }
+            },
+            {
+              "name": {
+                "value": "kreuzkümmel"
+              }
+            },
+            {
+              "name": {
+                "value": "krombacher"
+              }
+            },
+            {
+              "name": {
+                "value": "kräuter der provence"
+              }
+            },
+            {
+              "name": {
+                "value": "kräuterfrischkäse"
+              }
+            },
+            {
+              "name": {
+                "value": "kräuterquark"
+              }
+            },
+            {
+              "name": {
+                "value": "kräuterseitling"
+              }
+            },
+            {
+              "name": {
+                "value": "kräutertee"
+              }
+            },
+            {
+              "name": {
+                "value": "kuchen"
+              }
+            },
+            {
+              "name": {
+                "value": "kuehne"
+              }
+            },
+            {
+              "name": {
+                "value": "kurkuma"
+              }
+            },
+            {
+              "name": {
+                "value": "käse"
+              }
+            },
+            {
+              "name": {
+                "value": "kölln"
+              }
+            },
+            {
+              "name": {
+                "value": "kölsch"
+              }
+            },
+            {
+              "name": {
+                "value": "körniger frischkäse"
+              }
+            },
+            {
+              "name": {
+                "value": "köstritzer"
+              }
+            },
+            {
+              "name": {
+                "value": "küchenrolle"
+              }
+            },
+            {
+              "name": {
+                "value": "kühne"
+              }
+            },
+            {
+              "name": {
+                "value": "kümmel"
+              }
+            },
+            {
+              "name": {
+                "value": "kürbis"
+              }
+            },
+            {
+              "name": {
+                "value": "kürbiskerne"
+              }
+            },
+            {
+              "name": {
+                "value": "kürbiskernöl"
+              }
+            },
+            {
+              "name": {
+                "value": "kürbissuppe"
+              }
+            },
+            {
+              "name": {
+                "value": "l'oréal"
+              }
+            },
+            {
+              "name": {
+                "value": "labello"
+              }
+            },
+            {
+              "name": {
+                "value": "lachs"
+              }
+            },
+            {
+              "name": {
+                "value": "lakritz"
+              }
+            },
+            {
+              "name": {
+                "value": "laktosefreie milch"
+              }
+            },
+            {
+              "name": {
+                "value": "lambrusco"
+              }
+            },
+            {
+              "name": {
+                "value": "lamm"
+              }
+            },
+            {
+              "name": {
+                "value": "landliebe"
+              }
+            },
+            {
+              "name": {
+                "value": "langnese"
+              }
+            },
+            {
+              "name": {
+                "value": "lasagne"
+              }
+            },
+            {
+              "name": {
+                "value": "lauch"
+              }
+            },
+            {
+              "name": {
+                "value": "laugenbrezel"
+              }
+            },
+            {
+              "name": {
+                "value": "laugenstange"
+              }
+            },
+            {
+              "name": {
+                "value": "leberwurst"
+              }
+            },
+            {
+              "name": {
+                "value": "leerdammer"
+              }
+            },
+            {
+              "name": {
+                "value": "leibniz"
+              }
+            },
+            {
+              "name": {
+                "value": "leinsamen"
+              }
+            },
+            {
+              "name": {
+                "value": "leinöl"
+              }
+            },
+            {
+              "name": {
+                "value": "lemberger"
+              }
+            },
+            {
+              "name": {
+                "value": "lenor"
+              }
+            },
+            {
+              "name": {
+                "value": "lieken"
+              }
+            },
+            {
+              "name": {
+                "value": "lieken urkorn"
+              }
+            },
+            {
+              "name": {
+                "value": "lift"
+              }
+            },
+            {
+              "name": {
+                "value": "like meat"
+              }
+            },
+            {
+              "name": {
+                "value": "limburger"
+              }
+            },
+            {
+              "name": {
+                "value": "limette"
+              }
+            },
+            {
+              "name": {
+                "value": "limonade"
+              }
+            },
+            {
+              "name": {
+                "value": "lindt"
+              }
+            },
+            {
+              "name": {
+                "value": "linsen"
+              }
+            },
+            {
+              "name": {
+                "value": "linsen dose"
+              }
+            },
+            {
+              "name": {
+                "value": "linsensuppe"
+              }
+            },
+            {
+              "name": {
+                "value": "lion cereals"
+              }
+            },
+            {
+              "name": {
+                "value": "lipton"
+              }
+            },
+            {
+              "name": {
+                "value": "listerine"
+              }
+            },
+            {
+              "name": {
+                "value": "lorbeer"
+              }
+            },
+            {
+              "name": {
+                "value": "loreal"
+              }
+            },
+            {
+              "name": {
+                "value": "löwenbräu"
+              }
+            },
+            {
+              "name": {
+                "value": "m&m's"
+              }
+            },
+            {
+              "name": {
+                "value": "m&ms"
+              }
+            },
+            {
+              "name": {
+                "value": "maasdamer"
+              }
+            },
+            {
+              "name": {
+                "value": "maasdammer"
+              }
+            },
+            {
+              "name": {
+                "value": "macadamia"
+              }
+            },
+            {
+              "name": {
+                "value": "magerquark"
+              }
+            },
+            {
+              "name": {
+                "value": "maggi"
+              }
+            },
+            {
+              "name": {
+                "value": "magnum"
+              }
+            },
+            {
+              "name": {
+                "value": "magnum eis"
+              }
+            },
+            {
+              "name": {
+                "value": "mais"
+              }
+            },
+            {
+              "name": {
+                "value": "mais dose"
+              }
+            },
+            {
+              "name": {
+                "value": "makkaroni"
+              }
+            },
+            {
+              "name": {
+                "value": "makrele"
+              }
+            },
+            {
+              "name": {
+                "value": "mandarine"
+              }
+            },
+            {
+              "name": {
+                "value": "mandelmilch"
+              }
+            },
+            {
+              "name": {
+                "value": "mandelmus"
+              }
+            },
+            {
+              "name": {
+                "value": "mandeln"
+              }
+            },
+            {
+              "name": {
+                "value": "mango"
+              }
+            },
+            {
+              "name": {
+                "value": "mangold"
+              }
+            },
+            {
+              "name": {
+                "value": "margarine"
+              }
+            },
+            {
+              "name": {
+                "value": "marmelade"
+              }
+            },
+            {
+              "name": {
+                "value": "mars"
+              }
+            },
+            {
+              "name": {
+                "value": "mascarpone"
+              }
+            },
+            {
+              "name": {
+                "value": "mate"
+              }
+            },
+            {
+              "name": {
+                "value": "matjes"
+              }
+            },
+            {
+              "name": {
+                "value": "mayo"
+              }
+            },
+            {
+              "name": {
+                "value": "mayonnaise"
+              }
+            },
+            {
+              "name": {
+                "value": "meersalz"
+              }
+            },
+            {
+              "name": {
+                "value": "mehl"
+              }
+            },
+            {
+              "name": {
+                "value": "meister proper"
+              }
+            },
+            {
+              "name": {
+                "value": "melone"
+              }
+            },
+            {
+              "name": {
+                "value": "merlot"
+              }
+            },
+            {
+              "name": {
+                "value": "mestemacher"
+              }
+            },
+            {
+              "name": {
+                "value": "mettwurst"
+              }
+            },
+            {
+              "name": {
+                "value": "mezzo mix"
+              }
+            },
+            {
+              "name": {
+                "value": "milch"
+              }
+            },
+            {
+              "name": {
+                "value": "milchreis"
+              }
+            },
+            {
+              "name": {
+                "value": "milka"
+              }
+            },
+            {
+              "name": {
+                "value": "milky way"
+              }
+            },
+            {
+              "name": {
+                "value": "milupa"
+              }
+            },
+            {
+              "name": {
+                "value": "mineralwasser"
+              }
+            },
+            {
+              "name": {
+                "value": "minze"
+              }
+            },
+            {
+              "name": {
+                "value": "mio mate"
+              }
+            },
+            {
+              "name": {
+                "value": "miracoli"
+              }
+            },
+            {
+              "name": {
+                "value": "mirácoli"
+              }
+            },
+            {
+              "name": {
+                "value": "moevenpick"
+              }
+            },
+            {
+              "name": {
+                "value": "monster"
+              }
+            },
+            {
+              "name": {
+                "value": "monte"
+              }
+            },
+            {
+              "name": {
+                "value": "mortadella"
+              }
+            },
+            {
+              "name": {
+                "value": "mozzarella"
+              }
+            },
+            {
+              "name": {
+                "value": "moët"
+              }
+            },
+            {
+              "name": {
+                "value": "muellsack"
+              }
+            },
+            {
+              "name": {
+                "value": "muellsaecke"
+              }
+            },
+            {
+              "name": {
+                "value": "muffin"
+              }
+            },
+            {
+              "name": {
+                "value": "multivitaminsaft"
+              }
+            },
+            {
+              "name": {
+                "value": "mumm"
+              }
+            },
+            {
+              "name": {
+                "value": "mundspülung"
+              }
+            },
+            {
+              "name": {
+                "value": "munster"
+              }
+            },
+            {
+              "name": {
+                "value": "muscheln"
+              }
+            },
+            {
+              "name": {
+                "value": "muskatnuss"
+              }
+            },
+            {
+              "name": {
+                "value": "möhre"
+              }
+            },
+            {
+              "name": {
+                "value": "möhren"
+              }
+            },
+            {
+              "name": {
+                "value": "mövenpick"
+              }
+            },
+            {
+              "name": {
+                "value": "müllbeutel"
+              }
+            },
+            {
+              "name": {
+                "value": "müller"
+              }
+            },
+            {
+              "name": {
+                "value": "müller milch"
+              }
+            },
+            {
+              "name": {
+                "value": "müller-thurgau"
+              }
+            },
+            {
+              "name": {
+                "value": "müllermilch"
+              }
+            },
+            {
+              "name": {
+                "value": "müllsack"
+              }
+            },
+            {
+              "name": {
+                "value": "müllsäcke"
+              }
+            },
+            {
+              "name": {
+                "value": "müsli"
+              }
+            },
+            {
+              "name": {
+                "value": "müsliriegel"
+              }
+            },
+            {
+              "name": {
+                "value": "nassfutter"
+              }
+            },
+            {
+              "name": {
+                "value": "natron"
+              }
+            },
+            {
+              "name": {
+                "value": "naturjoghurt"
+              }
+            },
+            {
+              "name": {
+                "value": "nektarine"
+              }
+            },
+            {
+              "name": {
+                "value": "nelken"
+              }
+            },
+            {
+              "name": {
+                "value": "nesquik"
+              }
+            },
+            {
+              "name": {
+                "value": "nivea"
+              }
+            },
+            {
+              "name": {
+                "value": "nudeln"
+              }
+            },
+            {
+              "name": {
+                "value": "nudossi"
+              }
+            },
+            {
+              "name": {
+                "value": "nuss nougat"
+              }
+            },
+            {
+              "name": {
+                "value": "nuss-nougat-creme"
+              }
+            },
+            {
+              "name": {
+                "value": "nusspli"
+              }
+            },
+            {
+              "name": {
+                "value": "nutella"
+              }
+            },
+            {
+              "name": {
+                "value": "nutoka"
+              }
+            },
+            {
+              "name": {
+                "value": "nüsse gesalzen"
+              }
+            },
+            {
+              "name": {
+                "value": "ob"
+              }
+            },
+            {
+              "name": {
+                "value": "odol"
+              }
+            },
+            {
+              "name": {
+                "value": "oetker"
+              }
+            },
+            {
+              "name": {
+                "value": "oettinger"
+              }
+            },
+            {
+              "name": {
+                "value": "oliven"
+              }
+            },
+            {
+              "name": {
+                "value": "oliveno"
+              }
+            },
+            {
+              "name": {
+                "value": "olivenöl"
+              }
+            },
+            {
+              "name": {
+                "value": "oral-b"
+              }
+            },
+            {
+              "name": {
+                "value": "orange"
+              }
+            },
+            {
+              "name": {
+                "value": "orangensaft"
+              }
+            },
+            {
+              "name": {
+                "value": "oregano"
+              }
+            },
+            {
+              "name": {
+                "value": "ovomaltine"
+              }
+            },
+            {
+              "name": {
+                "value": "pak choi"
+              }
+            },
+            {
+              "name": {
+                "value": "pampers"
+              }
+            },
+            {
+              "name": {
+                "value": "pantene"
+              }
+            },
+            {
+              "name": {
+                "value": "papaya"
+              }
+            },
+            {
+              "name": {
+                "value": "paprika"
+              }
+            },
+            {
+              "name": {
+                "value": "paprikapulver"
+              }
+            },
+            {
+              "name": {
+                "value": "paracetamol"
+              }
+            },
+            {
+              "name": {
+                "value": "paranuss"
+              }
+            },
+            {
+              "name": {
+                "value": "paranüsse"
+              }
+            },
+            {
+              "name": {
+                "value": "parma"
+              }
+            },
+            {
+              "name": {
+                "value": "parmesan"
+              }
+            },
+            {
+              "name": {
+                "value": "passierte tomaten"
+              }
+            },
+            {
+              "name": {
+                "value": "passionsfrucht"
+              }
+            },
+            {
+              "name": {
+                "value": "pastinake"
+              }
+            },
+            {
+              "name": {
+                "value": "paulaner"
+              }
+            },
+            {
+              "name": {
+                "value": "pecorino"
+              }
+            },
+            {
+              "name": {
+                "value": "pedigree"
+              }
+            },
+            {
+              "name": {
+                "value": "pekannuss"
+              }
+            },
+            {
+              "name": {
+                "value": "penaten"
+              }
+            },
+            {
+              "name": {
+                "value": "penne"
+              }
+            },
+            {
+              "name": {
+                "value": "peperoni"
+              }
+            },
+            {
+              "name": {
+                "value": "pepsi"
+              }
+            },
+            {
+              "name": {
+                "value": "persil"
+              }
+            },
+            {
+              "name": {
+                "value": "perwoll"
+              }
+            },
+            {
+              "name": {
+                "value": "petersilie"
+              }
+            },
+            {
+              "name": {
+                "value": "pfanner"
+              }
+            },
+            {
+              "name": {
+                "value": "pfeffer"
+              }
+            },
+            {
+              "name": {
+                "value": "pfifferling"
+              }
+            },
+            {
+              "name": {
+                "value": "pfirsich"
+              }
+            },
+            {
+              "name": {
+                "value": "pflanzendrink"
+              }
+            },
+            {
+              "name": {
+                "value": "pflanzenjoghurt"
+              }
+            },
+            {
+              "name": {
+                "value": "pflanzenmargarine"
+              }
+            },
+            {
+              "name": {
+                "value": "pflanzenmilch"
+              }
+            },
+            {
+              "name": {
+                "value": "pflaume"
+              }
+            },
+            {
+              "name": {
+                "value": "philadelphia"
+              }
+            },
+            {
+              "name": {
+                "value": "pils"
+              }
+            },
+            {
+              "name": {
+                "value": "pilz"
+              }
+            },
+            {
+              "name": {
+                "value": "pilze"
+              }
+            },
+            {
+              "name": {
+                "value": "pinienkerne"
+              }
+            },
+            {
+              "name": {
+                "value": "pinot"
+              }
+            },
+            {
+              "name": {
+                "value": "pistazien"
+              }
+            },
+            {
+              "name": {
+                "value": "pita"
+              }
+            },
+            {
+              "name": {
+                "value": "pizza teig"
+              }
+            },
+            {
+              "name": {
+                "value": "pizza tiefkühl"
+              }
+            },
+            {
+              "name": {
+                "value": "pizzateig"
+              }
+            },
+            {
+              "name": {
+                "value": "plätzchen"
+              }
+            },
+            {
+              "name": {
+                "value": "polenta"
+              }
+            },
+            {
+              "name": {
+                "value": "pomelo"
+              }
+            },
+            {
+              "name": {
+                "value": "pommes"
+              }
+            },
+            {
+              "name": {
+                "value": "popcorn"
+              }
+            },
+            {
+              "name": {
+                "value": "porree"
+              }
+            },
+            {
+              "name": {
+                "value": "porridge"
+              }
+            },
+            {
+              "name": {
+                "value": "premium cola"
+              }
+            },
+            {
+              "name": {
+                "value": "pril"
+              }
+            },
+            {
+              "name": {
+                "value": "primitivo"
+              }
+            },
+            {
+              "name": {
+                "value": "prosecco"
+              }
+            },
+            {
+              "name": {
+                "value": "proteinriegel"
+              }
+            },
+            {
+              "name": {
+                "value": "pudding"
+              }
+            },
+            {
+              "name": {
+                "value": "pudding paradies"
+              }
+            },
+            {
+              "name": {
+                "value": "puderzucker"
+              }
+            },
+            {
+              "name": {
+                "value": "pute"
+              }
+            },
+            {
+              "name": {
+                "value": "putenbrust"
+              }
+            },
+            {
+              "name": {
+                "value": "quark"
+              }
+            },
+            {
+              "name": {
+                "value": "quinoa"
+              }
+            },
+            {
+              "name": {
+                "value": "raclette"
+              }
+            },
+            {
+              "name": {
+                "value": "raclettekäse"
+              }
+            },
+            {
+              "name": {
+                "value": "radeberger"
+              }
+            },
+            {
+              "name": {
+                "value": "radieschen"
+              }
+            },
+            {
+              "name": {
+                "value": "radler"
+              }
+            },
+            {
+              "name": {
+                "value": "ramen"
+              }
+            },
+            {
+              "name": {
+                "value": "rapsöl"
+              }
+            },
+            {
+              "name": {
+                "value": "rapunzel"
+              }
+            },
+            {
+              "name": {
+                "value": "rasierer"
+              }
+            },
+            {
+              "name": {
+                "value": "rasierschaum"
+              }
+            },
+            {
+              "name": {
+                "value": "ravioli dose"
+              }
+            },
+            {
+              "name": {
+                "value": "reblochon"
+              }
+            },
+            {
+              "name": {
+                "value": "red bull"
+              }
+            },
+            {
+              "name": {
+                "value": "reibekäse"
+              }
+            },
+            {
+              "name": {
+                "value": "reinert"
+              }
+            },
+            {
+              "name": {
+                "value": "reis"
+              }
+            },
+            {
+              "name": {
+                "value": "reishunger"
+              }
+            },
+            {
+              "name": {
+                "value": "reismilch"
+              }
+            },
+            {
+              "name": {
+                "value": "reisnudeln"
+              }
+            },
+            {
+              "name": {
+                "value": "rettich"
+              }
+            },
+            {
+              "name": {
+                "value": "rexona"
+              }
+            },
+            {
+              "name": {
+                "value": "rhabarber"
+              }
+            },
+            {
+              "name": {
+                "value": "ricotta"
+              }
+            },
+            {
+              "name": {
+                "value": "riesling"
+              }
+            },
+            {
+              "name": {
+                "value": "rinderbraten"
+              }
+            },
+            {
+              "name": {
+                "value": "rinderbruehe"
+              }
+            },
+            {
+              "name": {
+                "value": "rinderbrühe"
+              }
+            },
+            {
+              "name": {
+                "value": "rinderfilet"
+              }
+            },
+            {
+              "name": {
+                "value": "rinderhack"
+              }
+            },
+            {
+              "name": {
+                "value": "rinderroulade"
+              }
+            },
+            {
+              "name": {
+                "value": "rindfleisch"
+              }
+            },
+            {
+              "name": {
+                "value": "rinti"
+              }
+            },
+            {
+              "name": {
+                "value": "rioja"
+              }
+            },
+            {
+              "name": {
+                "value": "risotto"
+              }
+            },
+            {
+              "name": {
+                "value": "ritter sport"
+              }
+            },
+            {
+              "name": {
+                "value": "roastbeef"
+              }
+            },
+            {
+              "name": {
+                "value": "rocher"
+              }
+            },
+            {
+              "name": {
+                "value": "rockstar"
+              }
+            },
+            {
+              "name": {
+                "value": "roggenbrot"
+              }
+            },
+            {
+              "name": {
+                "value": "roggenmehl"
+              }
+            },
+            {
+              "name": {
+                "value": "rohschinken"
+              }
+            },
+            {
+              "name": {
+                "value": "rooibos"
+              }
+            },
+            {
+              "name": {
+                "value": "roquefort"
+              }
+            },
+            {
+              "name": {
+                "value": "rosbacher"
+              }
+            },
+            {
+              "name": {
+                "value": "rosenkohl"
+              }
+            },
+            {
+              "name": {
+                "value": "rosinen"
+              }
+            },
+            {
+              "name": {
+                "value": "rosmarin"
+              }
+            },
+            {
+              "name": {
+                "value": "rosé"
+              }
+            },
+            {
+              "name": {
+                "value": "rote bete"
+              }
+            },
+            {
+              "name": {
+                "value": "rote linsen"
+              }
+            },
+            {
+              "name": {
+                "value": "rote zwiebel"
+              }
+            },
+            {
+              "name": {
+                "value": "rothaus"
+              }
+            },
+            {
+              "name": {
+                "value": "rotkohl"
+              }
+            },
+            {
+              "name": {
+                "value": "rotkohl glas"
+              }
+            },
+            {
+              "name": {
+                "value": "rotkraut"
+              }
+            },
+            {
+              "name": {
+                "value": "rotkäppchen"
+              }
+            },
+            {
+              "name": {
+                "value": "rotwein"
+              }
+            },
+            {
+              "name": {
+                "value": "rucola"
+              }
+            },
+            {
+              "name": {
+                "value": "ruegenwalder"
+              }
+            },
+            {
+              "name": {
+                "value": "ruf"
+              }
+            },
+            {
+              "name": {
+                "value": "ruinart"
+              }
+            },
+            {
+              "name": {
+                "value": "räucherlachs"
+              }
+            },
+            {
+              "name": {
+                "value": "rügenwalder"
+              }
+            },
+            {
+              "name": {
+                "value": "rügenwalder mühle"
+              }
+            },
+            {
+              "name": {
+                "value": "saft"
+              }
+            },
+            {
+              "name": {
+                "value": "sagrotan"
+              }
+            },
+            {
+              "name": {
+                "value": "sahne"
+              }
+            },
+            {
+              "name": {
+                "value": "saint agur"
+              }
+            },
+            {
+              "name": {
+                "value": "salami"
+              }
+            },
+            {
+              "name": {
+                "value": "salat"
+              }
+            },
+            {
+              "name": {
+                "value": "salatgurke"
+              }
+            },
+            {
+              "name": {
+                "value": "salbei"
+              }
+            },
+            {
+              "name": {
+                "value": "salz"
+              }
+            },
+            {
+              "name": {
+                "value": "salzstangen"
+              }
+            },
+            {
+              "name": {
+                "value": "san pellegrino"
+              }
+            },
+            {
+              "name": {
+                "value": "sauerkraut"
+              }
+            },
+            {
+              "name": {
+                "value": "saure gurken"
+              }
+            },
+            {
+              "name": {
+                "value": "saure sahne"
+              }
+            },
+            {
+              "name": {
+                "value": "sauvignon"
+              }
+            },
+            {
+              "name": {
+                "value": "scampi"
+              }
+            },
+            {
+              "name": {
+                "value": "schafskäse"
+              }
+            },
+            {
+              "name": {
+                "value": "schalotte"
+              }
+            },
+            {
+              "name": {
+                "value": "schauma"
+              }
+            },
+            {
+              "name": {
+                "value": "scheibenkäse"
+              }
+            },
+            {
+              "name": {
+                "value": "schinken"
+              }
+            },
+            {
+              "name": {
+                "value": "schlagsahne"
+              }
+            },
+            {
+              "name": {
+                "value": "schlösser"
+              }
+            },
+            {
+              "name": {
+                "value": "schmalz"
+              }
+            },
+            {
+              "name": {
+                "value": "schmand"
+              }
+            },
+            {
+              "name": {
+                "value": "schmelzkäse"
+              }
+            },
+            {
+              "name": {
+                "value": "schnittlauch"
+              }
+            },
+            {
+              "name": {
+                "value": "schnitzel"
+              }
+            },
+            {
+              "name": {
+                "value": "schoeller"
+              }
+            },
+            {
+              "name": {
+                "value": "schoko duo"
+              }
+            },
+            {
+              "name": {
+                "value": "schokoduo"
+              }
+            },
+            {
+              "name": {
+                "value": "schokolade"
+              }
+            },
+            {
+              "name": {
+                "value": "schorle"
+              }
+            },
+            {
+              "name": {
+                "value": "schwamm"
+              }
+            },
+            {
+              "name": {
+                "value": "schwartau"
+              }
+            },
+            {
+              "name": {
+                "value": "schwarze bohnen"
+              }
+            },
+            {
+              "name": {
+                "value": "schwarztee"
+              }
+            },
+            {
+              "name": {
+                "value": "schweinebauch"
+              }
+            },
+            {
+              "name": {
+                "value": "schweinefilet"
+              }
+            },
+            {
+              "name": {
+                "value": "schweinefleisch"
+              }
+            },
+            {
+              "name": {
+                "value": "schwip schwap"
+              }
+            },
+            {
+              "name": {
+                "value": "schöfferhofer"
+              }
+            },
+            {
+              "name": {
+                "value": "schöller"
+              }
+            },
+            {
+              "name": {
+                "value": "seelachs"
+              }
+            },
+            {
+              "name": {
+                "value": "seife"
+              }
+            },
+            {
+              "name": {
+                "value": "seitan"
+              }
+            },
+            {
+              "name": {
+                "value": "sekt"
+              }
+            },
+            {
+              "name": {
+                "value": "sellerie"
+              }
+            },
+            {
+              "name": {
+                "value": "selters"
+              }
+            },
+            {
+              "name": {
+                "value": "semmel"
+              }
+            },
+            {
+              "name": {
+                "value": "senf"
+              }
+            },
+            {
+              "name": {
+                "value": "sensodyne"
+              }
+            },
+            {
+              "name": {
+                "value": "serrano"
+              }
+            },
+            {
+              "name": {
+                "value": "servietten"
+              }
+            },
+            {
+              "name": {
+                "value": "sesam"
+              }
+            },
+            {
+              "name": {
+                "value": "sesamöl"
+              }
+            },
+            {
+              "name": {
+                "value": "shampoo"
+              }
+            },
+            {
+              "name": {
+                "value": "sheba"
+              }
+            },
+            {
+              "name": {
+                "value": "shiitake"
+              }
+            },
+            {
+              "name": {
+                "value": "shiraz"
+              }
+            },
+            {
+              "name": {
+                "value": "shrimps"
+              }
+            },
+            {
+              "name": {
+                "value": "silvaner"
+              }
+            },
+            {
+              "name": {
+                "value": "sinalco"
+              }
+            },
+            {
+              "name": {
+                "value": "sirup"
+              }
+            },
+            {
+              "name": {
+                "value": "skyr"
+              }
+            },
+            {
+              "name": {
+                "value": "smacks"
+              }
+            },
+            {
+              "name": {
+                "value": "smarties"
+              }
+            },
+            {
+              "name": {
+                "value": "snickers"
+              }
+            },
+            {
+              "name": {
+                "value": "sodastream zylinder"
+              }
+            },
+            {
+              "name": {
+                "value": "soja granulat"
+              }
+            },
+            {
+              "name": {
+                "value": "soja joghurt"
+              }
+            },
+            {
+              "name": {
+                "value": "sojahack"
+              }
+            },
+            {
+              "name": {
+                "value": "sojamilch"
+              }
+            },
+            {
+              "name": {
+                "value": "sojasauce"
+              }
+            },
+            {
+              "name": {
+                "value": "sojaschnetzel"
+              }
+            },
+            {
+              "name": {
+                "value": "somat"
+              }
+            },
+            {
+              "name": {
+                "value": "sonnen bassermann"
+              }
+            },
+            {
+              "name": {
+                "value": "sonnenblumenkerne"
+              }
+            },
+            {
+              "name": {
+                "value": "sonnenblumenöl"
+              }
+            },
+            {
+              "name": {
+                "value": "sonnencreme"
+              }
+            },
+            {
+              "name": {
+                "value": "spaghetti"
+              }
+            },
+            {
+              "name": {
+                "value": "spargel"
+              }
+            },
+            {
+              "name": {
+                "value": "spaten"
+              }
+            },
+            {
+              "name": {
+                "value": "speck"
+              }
+            },
+            {
+              "name": {
+                "value": "speiseeis"
+              }
+            },
+            {
+              "name": {
+                "value": "speisestärke"
+              }
+            },
+            {
+              "name": {
+                "value": "spezi"
+              }
+            },
+            {
+              "name": {
+                "value": "spinat"
+              }
+            },
+            {
+              "name": {
+                "value": "sprite"
+              }
+            },
+            {
+              "name": {
+                "value": "sprudelwasser"
+              }
+            },
+            {
+              "name": {
+                "value": "spumante"
+              }
+            },
+            {
+              "name": {
+                "value": "spätburgunder"
+              }
+            },
+            {
+              "name": {
+                "value": "spätzle"
+              }
+            },
+            {
+              "name": {
+                "value": "spülbürste"
+              }
+            },
+            {
+              "name": {
+                "value": "spülmaschinensalz"
+              }
+            },
+            {
+              "name": {
+                "value": "spülmittel"
+              }
+            },
+            {
+              "name": {
+                "value": "sriracha"
+              }
+            },
+            {
+              "name": {
+                "value": "staatlich fachingen"
+              }
+            },
+            {
+              "name": {
+                "value": "stachelbeere"
+              }
+            },
+            {
+              "name": {
+                "value": "steak"
+              }
+            },
+            {
+              "name": {
+                "value": "steinpilz"
+              }
+            },
+            {
+              "name": {
+                "value": "stella artois"
+              }
+            },
+            {
+              "name": {
+                "value": "stilles wasser"
+              }
+            },
+            {
+              "name": {
+                "value": "stilton"
+              }
+            },
+            {
+              "name": {
+                "value": "storck"
+              }
+            },
+            {
+              "name": {
+                "value": "syrah"
+              }
+            },
+            {
+              "name": {
+                "value": "söhnlein"
+              }
+            },
+            {
+              "name": {
+                "value": "süßkartoffel"
+              }
+            },
+            {
+              "name": {
+                "value": "tagliatelle"
+              }
+            },
+            {
+              "name": {
+                "value": "tahini"
+              }
+            },
+            {
+              "name": {
+                "value": "taittinger"
+              }
+            },
+            {
+              "name": {
+                "value": "tampax"
+              }
+            },
+            {
+              "name": {
+                "value": "tampons"
+              }
+            },
+            {
+              "name": {
+                "value": "taschentücher"
+              }
+            },
+            {
+              "name": {
+                "value": "tee"
+              }
+            },
+            {
+              "name": {
+                "value": "teewurst"
+              }
+            },
+            {
+              "name": {
+                "value": "tegernseer"
+              }
+            },
+            {
+              "name": {
+                "value": "tempeh"
+              }
+            },
+            {
+              "name": {
+                "value": "tempo"
+              }
+            },
+            {
+              "name": {
+                "value": "tempranillo"
+              }
+            },
+            {
+              "name": {
+                "value": "teriyaki"
+              }
+            },
+            {
+              "name": {
+                "value": "thomapyrin"
+              }
+            },
+            {
+              "name": {
+                "value": "thunfisch"
+              }
+            },
+            {
+              "name": {
+                "value": "thymian"
+              }
+            },
+            {
+              "name": {
+                "value": "tiefkuehlpizza"
+              }
+            },
+            {
+              "name": {
+                "value": "tiefkühlpizza"
+              }
+            },
+            {
+              "name": {
+                "value": "tilsiter"
+              }
+            },
+            {
+              "name": {
+                "value": "tintenfisch"
+              }
+            },
+            {
+              "name": {
+                "value": "tk beeren"
+              }
+            },
+            {
+              "name": {
+                "value": "tk erbsen"
+              }
+            },
+            {
+              "name": {
+                "value": "tk fisch"
+              }
+            },
+            {
+              "name": {
+                "value": "tk gemüse"
+              }
+            },
+            {
+              "name": {
+                "value": "tk kräuter"
+              }
+            },
+            {
+              "name": {
+                "value": "tk pizza"
+              }
+            },
+            {
+              "name": {
+                "value": "tk pommes"
+              }
+            },
+            {
+              "name": {
+                "value": "tk spinat"
+              }
+            },
+            {
+              "name": {
+                "value": "toast"
+              }
+            },
+            {
+              "name": {
+                "value": "toastbrot"
+              }
+            },
+            {
+              "name": {
+                "value": "toblerone"
+              }
+            },
+            {
+              "name": {
+                "value": "tofu"
+              }
+            },
+            {
+              "name": {
+                "value": "toilettenpapier"
+              }
+            },
+            {
+              "name": {
+                "value": "tomate"
+              }
+            },
+            {
+              "name": {
+                "value": "tomaten"
+              }
+            },
+            {
+              "name": {
+                "value": "tomatenmark"
+              }
+            },
+            {
+              "name": {
+                "value": "tomatensaft"
+              }
+            },
+            {
+              "name": {
+                "value": "tomatensuppe"
+              }
+            },
+            {
+              "name": {
+                "value": "tortellini"
+              }
+            },
+            {
+              "name": {
+                "value": "tortilla chips"
+              }
+            },
+            {
+              "name": {
+                "value": "tortilla wrap"
+              }
+            },
+            {
+              "name": {
+                "value": "trauben"
+              }
+            },
+            {
+              "name": {
+                "value": "trockenfrüchte"
+              }
+            },
+            {
+              "name": {
+                "value": "trockenfutter"
+              }
+            },
+            {
+              "name": {
+                "value": "trockenhefe"
+              }
+            },
+            {
+              "name": {
+                "value": "trollinger"
+              }
+            },
+            {
+              "name": {
+                "value": "true fruits"
+              }
+            },
+            {
+              "name": {
+                "value": "tuborg"
+              }
+            },
+            {
+              "name": {
+                "value": "twix"
+              }
+            },
+            {
+              "name": {
+                "value": "uerige"
+              }
+            },
+            {
+              "name": {
+                "value": "uncle ben's"
+              }
+            },
+            {
+              "name": {
+                "value": "uncle bens"
+              }
+            },
+            {
+              "name": {
+                "value": "vacherin"
+              }
+            },
+            {
+              "name": {
+                "value": "valensina"
+              }
+            },
+            {
+              "name": {
+                "value": "vanille"
+              }
+            },
+            {
+              "name": {
+                "value": "vanillezucker"
+              }
+            },
+            {
+              "name": {
+                "value": "vanish"
+              }
+            },
+            {
+              "name": {
+                "value": "vegane bratwurst"
+              }
+            },
+            {
+              "name": {
+                "value": "vegane butter"
+              }
+            },
+            {
+              "name": {
+                "value": "vegane mayo"
+              }
+            },
+            {
+              "name": {
+                "value": "vegane mayonnaise"
+              }
+            },
+            {
+              "name": {
+                "value": "vegane salami"
+              }
+            },
+            {
+              "name": {
+                "value": "vegane wurst"
+              }
+            },
+            {
+              "name": {
+                "value": "veganer kaese"
+              }
+            },
+            {
+              "name": {
+                "value": "veganer käse"
+              }
+            },
+            {
+              "name": {
+                "value": "veganes hack"
+              }
+            },
+            {
+              "name": {
+                "value": "veggie wurst"
+              }
+            },
+            {
+              "name": {
+                "value": "veltins"
+              }
+            },
+            {
+              "name": {
+                "value": "veuve clicquot"
+              }
+            },
+            {
+              "name": {
+                "value": "vita cola"
+              }
+            },
+            {
+              "name": {
+                "value": "vitalis"
+              }
+            },
+            {
+              "name": {
+                "value": "vittel"
+              }
+            },
+            {
+              "name": {
+                "value": "vollkornbrot"
+              }
+            },
+            {
+              "name": {
+                "value": "vollkornmehl"
+              }
+            },
+            {
+              "name": {
+                "value": "vollmilch"
+              }
+            },
+            {
+              "name": {
+                "value": "vollmilchschokolade"
+              }
+            },
+            {
+              "name": {
+                "value": "volvic"
+              }
+            },
+            {
+              "name": {
+                "value": "waffeln"
+              }
+            },
+            {
+              "name": {
+                "value": "wagner pizza"
+              }
+            },
+            {
+              "name": {
+                "value": "wagner steinofen"
+              }
+            },
+            {
+              "name": {
+                "value": "walnussöl"
+              }
+            },
+            {
+              "name": {
+                "value": "walnüsse"
+              }
+            },
+            {
+              "name": {
+                "value": "warsteiner"
+              }
+            },
+            {
+              "name": {
+                "value": "wasa"
+              }
+            },
+            {
+              "name": {
+                "value": "waschmittel"
+              }
+            },
+            {
+              "name": {
+                "value": "wasser"
+              }
+            },
+            {
+              "name": {
+                "value": "wassermelone"
+              }
+            },
+            {
+              "name": {
+                "value": "wattepads"
+              }
+            },
+            {
+              "name": {
+                "value": "wattestäbchen"
+              }
+            },
+            {
+              "name": {
+                "value": "wc reiniger"
+              }
+            },
+            {
+              "name": {
+                "value": "weichspüler"
+              }
+            },
+            {
+              "name": {
+                "value": "weihenstephan"
+              }
+            },
+            {
+              "name": {
+                "value": "weihenstephaner"
+              }
+            },
+            {
+              "name": {
+                "value": "wein"
+              }
+            },
+            {
+              "name": {
+                "value": "weintrauben"
+              }
+            },
+            {
+              "name": {
+                "value": "weizenbier"
+              }
+            },
+            {
+              "name": {
+                "value": "weizenmehl"
+              }
+            },
+            {
+              "name": {
+                "value": "weißbrot"
+              }
+            },
+            {
+              "name": {
+                "value": "weißburgunder"
+              }
+            },
+            {
+              "name": {
+                "value": "weiße bohnen"
+              }
+            },
+            {
+              "name": {
+                "value": "weiße schokolade"
+              }
+            },
+            {
+              "name": {
+                "value": "weißkohl"
+              }
+            },
+            {
+              "name": {
+                "value": "weißwein"
+              }
+            },
+            {
+              "name": {
+                "value": "weißweinessig"
+              }
+            },
+            {
+              "name": {
+                "value": "weißwurst"
+              }
+            },
+            {
+              "name": {
+                "value": "whiskas"
+              }
+            },
+            {
+              "name": {
+                "value": "wiener"
+              }
+            },
+            {
+              "name": {
+                "value": "wiesenhof"
+              }
+            },
+            {
+              "name": {
+                "value": "wildreis"
+              }
+            },
+            {
+              "name": {
+                "value": "windeln"
+              }
+            },
+            {
+              "name": {
+                "value": "wirsing"
+              }
+            },
+            {
+              "name": {
+                "value": "wolfsblut"
+              }
+            },
+            {
+              "name": {
+                "value": "worcestersauce"
+              }
+            },
+            {
+              "name": {
+                "value": "wrap"
+              }
+            },
+            {
+              "name": {
+                "value": "wurst"
+              }
+            },
+            {
+              "name": {
+                "value": "yogurette"
+              }
+            },
+            {
+              "name": {
+                "value": "zahnbürste"
+              }
+            },
+            {
+              "name": {
+                "value": "zahnpasta"
+              }
+            },
+            {
+              "name": {
+                "value": "zahnseide"
+              }
+            },
+            {
+              "name": {
+                "value": "zartbitter"
+              }
+            },
+            {
+              "name": {
+                "value": "zentis"
+              }
+            },
+            {
+              "name": {
+                "value": "zewa"
+              }
+            },
+            {
+              "name": {
+                "value": "ziegenfrischkäse"
+              }
+            },
+            {
+              "name": {
+                "value": "ziegenkäse"
+              }
+            },
+            {
+              "name": {
+                "value": "zimt"
+              }
+            },
+            {
+              "name": {
+                "value": "zitrone"
+              }
+            },
+            {
+              "name": {
+                "value": "zucchini"
+              }
+            },
+            {
+              "name": {
+                "value": "zucker"
+              }
+            },
+            {
+              "name": {
+                "value": "zuckerschote"
+              }
+            },
+            {
+              "name": {
+                "value": "zwetschge"
+              }
+            },
+            {
+              "name": {
+                "value": "zwieback"
+              }
+            },
+            {
+              "name": {
+                "value": "zwiebel"
+              }
+            },
+            {
+              "name": {
+                "value": "zwiebeln"
+              }
+            },
+            {
+              "name": {
+                "value": "äpfel"
+              }
+            },
+            {
+              "name": {
+                "value": "ölsardinen"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "modelConfiguration": {
+      "fallbackIntentSensitivity": {
+        "level": "HIGH"
+      }
     }
   }
 }
