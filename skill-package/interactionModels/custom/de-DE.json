@@ -1,0 +1,70 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "einkaufsplan",
+      "intents": [
+        {
+          "name": "AddItemIntent",
+          "slots": [{ "name": "item", "type": "AMAZON.SearchQuery" }],
+          "samples": [
+            "füge {item} hinzu",
+            "füg {item} hinzu",
+            "{item} hinzufügen",
+            "setz {item} auf die liste",
+            "setze {item} auf die liste",
+            "setz {item} drauf",
+            "schreib {item} auf",
+            "schreibe {item} auf",
+            "trag {item} ein",
+            "trage {item} ein",
+            "pack {item} auf die liste",
+            "wir brauchen {item}",
+            "ich brauche {item}",
+            "wir brauchen noch {item}",
+            "noch {item}",
+            "und {item}",
+            "auch {item}"
+          ]
+        },
+        {
+          "name": "RemoveItemIntent",
+          "slots": [{ "name": "item", "type": "AMAZON.SearchQuery" }],
+          "samples": [
+            "streiche {item}",
+            "streich {item}",
+            "entferne {item}",
+            "entfern {item}",
+            "lösche {item}",
+            "lösch {item}",
+            "nimm {item} von der liste",
+            "{item} streichen",
+            "{item} entfernen",
+            "{item} löschen",
+            "{item} brauchen wir nicht mehr"
+          ]
+        },
+        {
+          "name": "ReadListIntent",
+          "slots": [],
+          "samples": [
+            "was steht auf der liste",
+            "was steht drauf",
+            "lies die liste vor",
+            "lies vor",
+            "was brauchen wir",
+            "was muss ich kaufen",
+            "was fehlt"
+          ]
+        },
+        { "name": "AMAZON.YesIntent", "samples": [] },
+        { "name": "AMAZON.NoIntent", "samples": ["nichts mehr", "das wars", "das war's", "fertig"] },
+        { "name": "AMAZON.HelpIntent", "samples": [] },
+        { "name": "AMAZON.CancelIntent", "samples": [] },
+        { "name": "AMAZON.StopIntent", "samples": [] },
+        { "name": "AMAZON.NavigateHomeIntent", "samples": [] },
+        { "name": "AMAZON.FallbackIntent", "samples": [] }
+      ],
+      "types": []
+    }
+  }
+}

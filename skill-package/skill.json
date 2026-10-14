@@ -1,0 +1,35 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "de-DE": {
+          "name": "Einkaufsplan",
+          "summary": "Einkaufsliste der Einkaufsplan-App per Sprache füllen.",
+          "description": "Fügt Einträge zur Einkaufsliste der Einkaufsplan-App hinzu, streicht sie oder liest die Liste vor. Privater Skill.",
+          "examplePhrases": [
+            "Alexa, sag Einkaufsplan, füge Milch hinzu",
+            "Alexa, frag Einkaufsplan, was auf der Liste steht",
+            "Alexa, sag Einkaufsplan, streiche Tomaten"
+          ],
+          "keywords": ["einkaufsliste", "einkauf"]
+        }
+      },
+      "isAvailableWorldwide": false,
+      "distributionCountries": ["DE"],
+      "testingInstructions": "Privater Skill für einen Haushalt.",
+      "category": "SHOPPING"
+    },
+    "apis": {
+      "custom": {}
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "usesPersonalInfo": false,
+      "isChildDirected": false,
+      "isExportCompliant": true,
+      "containsAds": false,
+      "locales": { "de-DE": {} }
+    }
+  }
+}
