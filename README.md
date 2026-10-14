@@ -35,3 +35,8 @@ Es müssen keine Dateien bearbeitet werden: Der Skill enthält keine Zugangsdate
 ## Lokal testen
 
 In `lambda/`: `npm i`, `config.baseUrl` auf eine Test-Instanz setzen und Requests an `exports.handler` schicken (Callback-Stil: `handler(event, context, (err, res) => …)`). Ohne `DYNAMODB_PERSISTENCE_TABLE_NAME` wird die Kopplung im Arbeitsspeicher gehalten.
+
+## Kürzer sprechen
+
+- **Eigener Aufrufname:** Developer Console → Build → Invocations → Skill Invocation Name (z. B. „einkauf“), speichern, Modell neu erstellen. Sehr allgemeine Wörter vermeiden; lehnt die Console ein Einzelwort ab, zwei Wörter nehmen.
+- **Alexa-Routinen** (feste Sätze, Aktion „Benutzerdefiniert“): „Alexa, Einkaufsliste“ → `öffne einkaufsplan` (Dialog: „Was soll drauf?“), „Alexa, was steht auf der Einkaufsliste“ → `frag einkaufsplan was auf der liste steht`. Frei gesprochene Artikel kann eine Routine nicht weitergeben.
