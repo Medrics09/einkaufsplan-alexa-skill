@@ -142,21 +142,6 @@
           "values": [
             {
               "name": {
-                "value": "1337 mate"
-              }
-            },
-            {
-              "name": {
-                "value": "28 black"
-              }
-            },
-            {
-              "name": {
-                "value": "8x4"
-              }
-            },
-            {
-              "name": {
                 "value": "actimel"
               }
             },
@@ -417,7 +402,7 @@
             },
             {
               "name": {
-                "value": "beck's"
+                "value": "beck s"
               }
             },
             {
@@ -427,22 +412,12 @@
             },
             {
               "name": {
-                "value": "ben & jerry's"
-              }
-            },
-            {
-              "name": {
-                "value": "ben & jerrys"
-              }
-            },
-            {
-              "name": {
                 "value": "ben and jerrys"
               }
             },
             {
               "name": {
-                "value": "ben's original"
+                "value": "ben s original"
               }
             },
             {
@@ -842,22 +817,7 @@
             },
             {
               "name": {
-                "value": "co2 flasche"
-              }
-            },
-            {
-              "name": {
-                "value": "co2 zylinder"
-              }
-            },
-            {
-              "name": {
                 "value": "coca cola"
-              }
-            },
-            {
-              "name": {
-                "value": "coca-cola"
               }
             },
             {
@@ -887,7 +847,7 @@
             },
             {
               "name": {
-                "value": "comté"
+                "value": "comte"
               }
             },
             {
@@ -937,6 +897,11 @@
             },
             {
               "name": {
+                "value": "cremant"
+              }
+            },
+            {
+              "name": {
                 "value": "creme fraiche"
               }
             },
@@ -948,16 +913,6 @@
             {
               "name": {
                 "value": "crunchy müsli"
-              }
-            },
-            {
-              "name": {
-                "value": "crème fraîche"
-              }
-            },
-            {
-              "name": {
-                "value": "crémant"
               }
             },
             {
@@ -1037,7 +992,7 @@
             },
             {
               "name": {
-                "value": "dom pérignon"
+                "value": "dom perignon"
               }
             },
             {
@@ -1068,16 +1023,6 @@
             {
               "name": {
                 "value": "dr oetker"
-              }
-            },
-            {
-              "name": {
-                "value": "dr. best"
-              }
-            },
-            {
-              "name": {
-                "value": "dr. oetker"
               }
             },
             {
@@ -1422,7 +1367,7 @@
             },
             {
               "name": {
-                "value": "frischkäse-aufstrich"
+                "value": "frischkäse aufstrich"
               }
             },
             {
@@ -1682,17 +1627,12 @@
             },
             {
               "name": {
-                "value": "géramont"
+                "value": "h milch"
               }
             },
             {
               "name": {
-                "value": "h-milch"
-              }
-            },
-            {
-              "name": {
-                "value": "haagen-dazs"
+                "value": "haagen dazs"
               }
             },
             {
@@ -1763,11 +1703,6 @@
             {
               "name": {
                 "value": "haselnüsse"
-              }
-            },
-            {
-              "name": {
-                "value": "head & shoulders"
               }
             },
             {
@@ -1917,7 +1852,7 @@
             },
             {
               "name": {
-                "value": "häagen-dazs"
+                "value": "häagen dazs"
               }
             },
             {
@@ -1982,7 +1917,7 @@
             },
             {
               "name": {
-                "value": "jalapeño"
+                "value": "jalapeno"
               }
             },
             {
@@ -2107,7 +2042,7 @@
             },
             {
               "name": {
-                "value": "kellogg's"
+                "value": "kellogg s"
               }
             },
             {
@@ -2417,7 +2352,7 @@
             },
             {
               "name": {
-                "value": "l'oréal"
+                "value": "l oreal"
               }
             },
             {
@@ -2598,16 +2533,6 @@
             {
               "name": {
                 "value": "löwenbräu"
-              }
-            },
-            {
-              "name": {
-                "value": "m&m's"
-              }
-            },
-            {
-              "name": {
-                "value": "m&ms"
               }
             },
             {
@@ -2822,7 +2747,7 @@
             },
             {
               "name": {
-                "value": "mirácoli"
+                "value": "moet"
               }
             },
             {
@@ -2848,11 +2773,6 @@
             {
               "name": {
                 "value": "mozzarella"
-              }
-            },
-            {
-              "name": {
-                "value": "moët"
               }
             },
             {
@@ -2932,7 +2852,7 @@
             },
             {
               "name": {
-                "value": "müller-thurgau"
+                "value": "müller thurgau"
               }
             },
             {
@@ -3012,7 +2932,7 @@
             },
             {
               "name": {
-                "value": "nuss-nougat-creme"
+                "value": "nuss nougat creme"
               }
             },
             {
@@ -3072,7 +2992,7 @@
             },
             {
               "name": {
-                "value": "oral-b"
+                "value": "oral b"
               }
             },
             {
@@ -3637,6 +3557,11 @@
             },
             {
               "name": {
+                "value": "rose"
+              }
+            },
+            {
+              "name": {
                 "value": "rosenkohl"
               }
             },
@@ -3648,11 +3573,6 @@
             {
               "name": {
                 "value": "rosmarin"
-              }
-            },
-            {
-              "name": {
-                "value": "rosé"
               }
             },
             {
@@ -4527,7 +4447,7 @@
             },
             {
               "name": {
-                "value": "uncle ben's"
+                "value": "uncle ben s"
               }
             },
             {
