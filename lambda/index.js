@@ -2,14 +2,14 @@
 // vorlesen. Spricht direkt mit der Erweiterungs-API der Einkaufsplan-App.
 //
 // Jeder Haushalt legt den Skill einmal selbst an (Import dieses Repos) und
-// koppelt ihn per Code aus der App: „Alexa, sag Einkaufsplan, Kopplungscode
+// koppelt ihn per Code aus der App: „Alexa, sag mein Einkaufsplan, Kopplungscode
 // 4 8 1 5 2 3“. Der dabei erhaltene API-Schlüssel wird pro Alexa-Konto im
 // Skill-Speicher abgelegt; die Liste wählt der Haushalt in der App.
 //
-//   „Alexa, sag Einkaufsplan, füge zwei Liter Milch und Eier hinzu“
-//   „Alexa, sag Einkaufsplan, streiche Tomaten“
-//   „Alexa, frag Einkaufsplan, was auf der Liste steht“
-//   „Alexa, öffne Einkaufsplan“ → „Was soll drauf?“ → „Butter“ → „Noch etwas?“ …
+//   „Alexa, sag mein Einkaufsplan, füge zwei Liter Milch und Eier hinzu“
+//   „Alexa, sag mein Einkaufsplan, streiche Tomaten“
+//   „Alexa, frag mein Einkaufsplan, was auf der Liste steht“
+//   „Alexa, öffne mein Einkaufsplan“ → „Was soll drauf?“ → „Butter“ → „Noch etwas?“ …
 
 const Alexa = require("ask-sdk-core");
 const api = require("./api");
@@ -25,7 +25,7 @@ const SUCCESS_SOUND = '<audio src="soundbank://soundlibrary/ui/gameshow/amzn_ui_
 const NOT_PAIRED =
   "Dieser Skill ist noch nicht mit deinem Einkaufsplan verbunden. " +
   "Öffne in der Einkaufsplan-App Haushalt, API-Schlüssel, Alexa koppeln, und sag dann: " +
-  "Alexa, sag Einkaufsplan, Kopplungscode, gefolgt von den sechs Ziffern.";
+  "Alexa, sag mein Einkaufsplan, Kopplungscode, gefolgt von den sechs Ziffern.";
 
 // Text für SSML entschärfen (Zutatennamen können &, < usw. enthalten).
 function ssml(text) {
@@ -36,8 +36,8 @@ function slotValue(handlerInput, name) {
   return Alexa.getSlotValue(handlerInput.requestEnvelope, name) || "";
 }
 
-// Im offenen Gespräch („öffne Einkaufsplan“) nach jeder Aktion nachfragen,
-// bei Einzelbefehlen („sag Einkaufsplan, …“) direkt beenden.
+// Im offenen Gespräch („öffne mein Einkaufsplan“) nach jeder Aktion nachfragen,
+// bei Einzelbefehlen („sag mein Einkaufsplan, …“) direkt beenden.
 function inDialog(handlerInput) {
   return !!handlerInput.attributesManager.getSessionAttributes().dialog;
 }
@@ -118,7 +118,7 @@ const PairIntentHandler = {
       await saveLink(h, { apiToken: res.token, household: res.household, list: res.list });
       const list = res.list ? ` Ich nutze die Liste ${res.list.name}.` : "";
       return h.responseBuilder
-        .speak(`${SUCCESS_SOUND}${ssml(`Verbunden mit dem Einkaufsplan von ${res.household}.${list} Sag zum Beispiel: Alexa, sag Einkaufsplan, füge Milch hinzu.`)}`)
+        .speak(`${SUCCESS_SOUND}${ssml(`Verbunden mit dem Einkaufsplan von ${res.household}.${list} Sag zum Beispiel: Alexa, sag mein Einkaufsplan, füge Milch hinzu.`)}`)
         .withShouldEndSession(true)
         .getResponse();
     } catch (err) {

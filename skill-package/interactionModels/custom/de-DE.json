@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "einkaufs plan",
+      "invocationName": "mein einkaufsplan",
       "intents": [
         {
           "name": "PairIntent",
