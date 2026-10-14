@@ -10,23 +10,39 @@ class ApiError extends Error {
   }
 }
 
-async function request(method, path, { token, body } = {}) {
-  const res = await fetch(config.baseUrl.replace(/\/+$/, "") + "/api/ext/v1" + path, {
-    method,
-    headers: {
-      ...(token ? { Authorization: `Bearer ${token}` } : {}),
-      ...(body ? { "Content-Type": "application/json" } : {}),
-    },
-    body: body ? JSON.stringify(body) : undefined,
-    signal: AbortSignal.timeout(6000), // Alexa wartet max. ~8 s auf die Antwort
+// Bewusst mit dem eingebauten https-Modul statt fetch(): läuft auf jeder
+// Node-Version, die Alexa-hosted Skills verwenden.
+function request(method, path, { token, body } = {}) {
+  const url = new URL(config.baseUrl.replace(/\/+$/, "") + "/api/ext/v1" + path);
+  const payload = body ? JSON.stringify(body) : null;
+  const headers = {};
+  if (token) headers.Authorization = `Bearer ${token}`;
+  if (payload) {
+    headers["Content-Type"] = "application/json";
+    headers["Content-Length"] = Buffer.byteLength(payload);
+  }
+  const lib = url.protocol === "http:" ? require("http") : require("https");
+  return new Promise((resolve, reject) => {
+    const req = lib.request(url, { method, headers, timeout: 6000 }, (res) => {
+      let raw = "";
+      res.setEncoding("utf8");
+      res.on("data", (chunk) => (raw += chunk));
+      res.on("end", () => {
+        if (res.statusCode === 204) return resolve(null);
+        let data = {};
+        try {
+          data = raw ? JSON.parse(raw) : {};
+        } catch (_) {}
+        if (res.statusCode >= 400) return reject(new ApiError(res.statusCode, data.message || `HTTP ${res.statusCode}`));
+        resolve(data);
+      });
+    });
+    // Alexa wartet max. ~8 s auf die Antwort.
+    req.on("timeout", () => req.destroy(new ApiError(504, "Zeitüberschreitung")));
+    req.on("error", reject);
+    if (payload) req.write(payload);
+    req.end();
   });
-  if (res.status === 204) return null;
-  let data = {};
-  try {
-    data = await res.json();
-  } catch (_) {}
-  if (!res.ok) throw new ApiError(res.status, data.message || `HTTP ${res.status}`);
-  return data;
 }
 
 module.exports = {

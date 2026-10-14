@@ -1,13 +1,13 @@
 {
   "name": "einkaufsplan-alexa-skill",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Alexa-Skill für die Erweiterungs-API der Einkaufsplan-App",
   "main": "index.js",
   "private": true,
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "^3.600.0",
     "ask-sdk-core": "^2.14.0",
     "ask-sdk-dynamodb-persistence-adapter": "^2.14.0",
-    "ask-sdk-model": "^1.86.0"
+    "ask-sdk-model": "^1.86.0",
+    "aws-sdk": "^2.1691.0"
   }
 }

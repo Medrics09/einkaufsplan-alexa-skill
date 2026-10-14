@@ -15,12 +15,14 @@ function memoryAdapter() {
 function adapter() {
   const table = process.env.DYNAMODB_PERSISTENCE_TABLE_NAME;
   if (!table) return memoryAdapter();
+  // Wie in Amazons Alexa-hosted-Vorlage: Adapter 2.x erwartet den
+  // DynamoDB-Client aus aws-sdk v2.
   const { DynamoDbPersistenceAdapter } = require("ask-sdk-dynamodb-persistence-adapter");
-  const { DynamoDBClient } = require("@aws-sdk/client-dynamodb");
+  const AWS = require("aws-sdk");
   return new DynamoDbPersistenceAdapter({
     tableName: table,
     createTable: false,
-    dynamoDBClient: new DynamoDBClient({ region: process.env.DYNAMODB_PERSISTENCE_REGION }),
+    dynamoDBClient: new AWS.DynamoDB({ apiVersion: "latest", region: process.env.DYNAMODB_PERSISTENCE_REGION }),
   });
 }
 
