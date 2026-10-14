@@ -57,14 +57,14 @@
           "name": "ItemOnlyIntent",
           "slots": [
             {
-              "name": "item",
+              "name": "grocery",
               "type": "GROCERY"
             }
           ],
           "samples": [
-            "{item}",
-            "{item} bitte",
-            "bitte {item}"
+            "{grocery}",
+            "{grocery} bitte",
+            "bitte {grocery}"
           ]
         },
         {

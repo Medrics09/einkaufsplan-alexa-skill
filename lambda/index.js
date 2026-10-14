@@ -145,7 +145,7 @@ const AddItemIntentHandler = {
   canHandle: (h) => isIntent(h, "AddItemIntent", "ItemOnlyIntent"),
   handle: (h) =>
     withToken(h, async (token) => {
-      const parts = splitItems(slotValue(h, "item"));
+      const parts = splitItems(slotValue(h, "item") || slotValue(h, "grocery"));
       if (parts.length === 0) {
         return h.responseBuilder.speak("Was soll ich hinzufügen?").reprompt("Was soll in den Einkaufsplan?").getResponse();
       }
