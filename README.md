@@ -1,33 +1,37 @@
 # Alexa-Skill „Einkaufsplan“
 
-Privater Alexa-Skill, der direkt mit der Erweiterungs-API (`/api/ext/v1/`) spricht. Amazon hat die Schnittstelle für die eingebaute Alexa-Einkaufsliste 2024 abgeschaltet – deshalb ein eigener Skill mit eigenem Aufrufnamen.
+Alexa-Skill für die [Einkaufsplan-App](https://ep.wievielbrauchich.de): Einträge per Sprache hinzufügen, streichen und vorlesen. Amazon hat die Schnittstelle zur eingebauten Alexa-Einkaufsliste 2024 abgeschaltet – deshalb ein eigener Skill mit eigenem Aufrufnamen.
 
 | Sprachbefehl | Wirkung |
 |---|---|
 | „Alexa, sag Einkaufsplan, füge zwei Liter Milch und Eier hinzu“ | hinzufügen (mehrere mit „und“/Komma) |
 | „Alexa, sag Einkaufsplan, streiche Tomaten“ | per Name entfernen |
 | „Alexa, frag Einkaufsplan, was auf der Liste steht“ | offene Einträge vorlesen (max. 15) |
-| „Alexa, öffne Einkaufsplan“ → „Butter“ → „Noch etwas?“ → „nein“ | Dialog für mehrere Einträge |
+| „Alexa, öffne Einkaufsplan“ → „Butter“ → „Noch etwas?“ → „nein“ | mehrere Einträge nacheinander |
+| „Alexa, sag Einkaufsplan, Kopplungscode 4 8 1 5 2 3“ | mit dem Haushalt verbinden |
+| „Alexa, sag Einkaufsplan, trenne die Verbindung“ | Kopplung auf diesem Alexa-Konto löschen |
 
 Jede erfolgreiche Änderung beginnt mit einem Ton und nennt „Einkaufsplan“ – so ist hörbar, dass nicht Alexas eigene Liste bedient wurde. Zuordnung zu vorhandenen Zutaten (Singular/Plural, Tippfehler) und Zusammenführen macht das Backend.
 
+## Einrichtung (pro Haushalt, ca. 15 Minuten)
+
+Die ausführliche Anleitung steht in der App unter **Haushalt → API-Schlüssel → Anleitung**. Kurzfassung:
+
+1. Auf <https://developer.amazon.com/alexa/console/ask> mit dem Amazon-Konto der Echos anmelden.
+2. „Skill erstellen“ → Name „Einkaufsplan“, Deutsch (DE), Modell „Benutzerdefiniert“, Hosting „Alexa-hosted (Node.js)“, Region EU → Vorlage **„Skill importieren“** mit der Adresse dieses Repositorys.
+3. Reiter „Test“ → auf „Entwicklung“ stellen.
+4. In der App: Haushalt → API-Schlüssel → **„Alexa koppeln“** → Liste wählen, Code erzeugen und den Kopplungssatz zum Echo sagen.
+
+Es müssen keine Dateien bearbeitet werden: Der Skill enthält keine Zugangsdaten. Beim Koppeln tauscht er den Einmal-Code gegen einen eigenen API-Schlüssel des Haushalts und legt ihn pro Alexa-Konto im Skill-Speicher (DynamoDB des Alexa-hosted Skills) ab. Die Liste wird in der App gewählt; wird der Schlüssel „Alexa“ dort gelöscht, ist der Skill getrennt.
+
 ## Aufbau
 
-- `skill-package/` – Manifest und Sprachmodell (de-DE, Slot `AMAZON.SearchQuery`)
-- `lambda/` – Node.js-Code (ask-sdk-core), läuft als **Alexa-hosted Skill** (kostenlos, kein AWS-Konto nötig)
-- `lambda/config.js` – Backend-Adresse, API-Schlüssel, Liste. **Nicht im Git** (siehe `config.example.js`); liegt nur im privaten Code-Repository des Skills bei Amazon.
-
-## Einrichtung
-
-1. Amazon-Entwicklerkonto auf <https://developer.amazon.com> mit **demselben Amazon-Konto wie die Echos** anlegen.
-2. In der App unter Haushalt → API-Schlüssel einen eigenen Schlüssel „Alexa“ erzeugen.
-3. Alexa Developer Console → „Skill erstellen“: Name „Einkaufsplan“, Sprache Deutsch, Modell „Benutzerdefiniert“, Hosting „Alexa-hosted (Node.js)“, Vorlage „Von Grund auf neu“.
-4. Sprachmodell: Build → JSON-Editor → Inhalt von `skill-package/interactionModels/custom/de-DE.json` einfügen → Speichern → „Modell erstellen“.
-5. Code: Reiter „Code“ → `index.js`, `api.js`, `speech.js`, `package.json` ersetzen bzw. anlegen, `config.js` aus `config.example.js` anlegen und ausfüllen → „Bereitstellen“.
-6. Reiter „Test“ → Test auf „Entwicklung“ stellen. Ab jetzt funktioniert der Skill auf allen Echos des Kontos (kein Veröffentlichen nötig).
-
-Alternativ mit der ASK CLI (`npx ask-cli@2 configure`, dann `ask init --hosted-skill-id <id>` und Dateien ins geklonte Repo kopieren, `git push`).
+- `skill-package/` – Manifest und Sprachmodell (de-DE; `AMAZON.SearchQuery` für Einträge, `AMAZON.NUMBER` für den Code)
+- `lambda/index.js` – Intents, Kopplung, Antworten
+- `lambda/api.js` – Aufrufe der Erweiterungs-API (`/api/ext/v1/pair`, `/lists/default/…`)
+- `lambda/persistence.js` – DynamoDB im Alexa-hosted Skill, lokal im Arbeitsspeicher
+- `lambda/config.js` – Backend-Adresse (keine Geheimnisse)
 
 ## Lokal testen
 
-`lambda/config.js` auf eine Test-Instanz zeigen lassen, `npm i` in `lambda/`, dann Requests an `exports.handler` schicken (Callback-Stil: `handler(event, context, (err, res) => …)`).
+In `lambda/`: `npm i`, `config.baseUrl` auf eine Test-Instanz setzen und Requests an `exports.handler` schicken (Callback-Stil: `handler(event, context, (err, res) => …)`). Ohne `DYNAMODB_PERSISTENCE_TABLE_NAME` wird die Kopplung im Arbeitsspeicher gehalten.

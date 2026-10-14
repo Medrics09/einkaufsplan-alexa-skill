@@ -20,11 +20,12 @@ function number(n) {
   return Number.isInteger(n) ? String(n) : String(Math.round(n * 100) / 100).replace(".", ",");
 }
 
-// „2 Liter Milch“, „Butter“ (1 Stück), „3 Äpfel“
+// „2 Liter Milch“, „Butter“ (1 Stück), „3 Stück Apfel“
 function itemPhrase(item) {
   const amount = Number(item.amount) || 0;
   const [singular, plural] = UNIT_WORDS[item.unit || ""] || [item.unit, item.unit];
-  if (!item.unit) return amount > 1 ? `${number(amount)} ${item.name}` : item.name;
+  // Ohne Einheit: „2 Stück Tomate“ — die Pluralform des Namens kennen wir nicht.
+  if (!item.unit) return amount > 1 ? `${number(amount)} Stück ${item.name}` : item.name;
   const unit = amount === 1 ? singular : plural;
   return amount > 0 ? `${number(amount)} ${unit} ${item.name}` : `${item.name}`;
 }

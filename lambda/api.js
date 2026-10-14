@@ -1,6 +1,6 @@
 // Dünner Client für die Erweiterungs-API (/api/ext/v1/). Die gesamte
-// Logik (Zerlegen von „2 l Milch“, Zuordnung zu Zutaten, Zusammenführen)
-// liegt im Backend — hier wird nur aufgerufen.
+// Logik (Zerlegen von „2 l Milch“, Zuordnung zu Zutaten, Zusammenführen,
+// Standardliste des Schlüssels) liegt im Backend.
 const config = require("./config");
 
 class ApiError extends Error {
@@ -10,11 +10,11 @@ class ApiError extends Error {
   }
 }
 
-async function request(method, path, body) {
+async function request(method, path, { token, body } = {}) {
   const res = await fetch(config.baseUrl.replace(/\/+$/, "") + "/api/ext/v1" + path, {
     method,
     headers: {
-      Authorization: `Bearer ${config.apiKey}`,
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
       ...(body ? { "Content-Type": "application/json" } : {}),
     },
     body: body ? JSON.stringify(body) : undefined,
@@ -29,21 +29,11 @@ async function request(method, path, body) {
   return data;
 }
 
-let cachedListId = config.listId || null;
-
-async function listId() {
-  if (cachedListId) return cachedListId;
-  const { lists } = await request("GET", "/lists");
-  const wanted = (config.listName || "").trim().toLowerCase();
-  const hit = lists.find((l) => l.name.trim().toLowerCase() === wanted) || lists[0];
-  if (!hit) throw new ApiError(404, "Keine Liste gefunden.");
-  cachedListId = hit.id;
-  return cachedListId;
-}
-
 module.exports = {
   ApiError,
-  add: async (text) => request("POST", `/lists/${await listId()}/items`, { text }),
-  remove: async (name) => request("POST", `/lists/${await listId()}/items/remove`, { name }),
-  items: async () => request("GET", `/lists/${await listId()}/items`),
+  pair: (code) => request("POST", "/pair", { body: { code, name: "Alexa" } }),
+  me: (token) => request("GET", "/me", { token }),
+  add: (token, text) => request("POST", "/lists/default/items", { token, body: { text } }),
+  remove: (token, name) => request("POST", "/lists/default/items/remove", { token, body: { name } }),
+  items: (token) => request("GET", "/lists/default/items", { token }),
 };

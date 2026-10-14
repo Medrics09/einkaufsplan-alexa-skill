@@ -4,8 +4,46 @@
       "invocationName": "einkaufsplan",
       "intents": [
         {
+          "name": "PairIntent",
+          "slots": [
+            {
+              "name": "code",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "kopplungscode {code}",
+            "der kopplungscode ist {code}",
+            "mein kopplungscode ist {code}",
+            "koppeln mit {code}",
+            "koppel mit {code}",
+            "kopple mit {code}",
+            "verbinde mit {code}",
+            "verbinden mit code {code}",
+            "code {code}",
+            "der code ist {code}",
+            "mein code ist {code}"
+          ]
+        },
+        {
+          "name": "UnpairIntent",
+          "slots": [],
+          "samples": [
+            "trenne die verbindung",
+            "verbindung trennen",
+            "entkoppeln",
+            "kopplung aufheben",
+            "kopplung löschen"
+          ]
+        },
+        {
           "name": "AddItemIntent",
-          "slots": [{ "name": "item", "type": "AMAZON.SearchQuery" }],
+          "slots": [
+            {
+              "name": "item",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
           "samples": [
             "füge {item} hinzu",
             "füg {item} hinzu",
@@ -28,7 +66,12 @@
         },
         {
           "name": "RemoveItemIntent",
-          "slots": [{ "name": "item", "type": "AMAZON.SearchQuery" }],
+          "slots": [
+            {
+              "name": "item",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
           "samples": [
             "streiche {item}",
             "streich {item}",
@@ -56,13 +99,39 @@
             "was fehlt"
           ]
         },
-        { "name": "AMAZON.YesIntent", "samples": [] },
-        { "name": "AMAZON.NoIntent", "samples": ["nichts mehr", "das wars", "das war's", "fertig"] },
-        { "name": "AMAZON.HelpIntent", "samples": [] },
-        { "name": "AMAZON.CancelIntent", "samples": [] },
-        { "name": "AMAZON.StopIntent", "samples": [] },
-        { "name": "AMAZON.NavigateHomeIntent", "samples": [] },
-        { "name": "AMAZON.FallbackIntent", "samples": [] }
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": [
+            "nichts mehr",
+            "das wars",
+            "das war's",
+            "fertig"
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        }
       ],
       "types": []
     }
